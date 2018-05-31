@@ -1,10 +1,10 @@
 backend:
   name: github
-  repo: repository # Path to your GitHub repository
-  branch: main # Branch to update
-media_folder: "source/images/uploads" # Folder where user uploaded files should go
+  repo: Voormedia/saskia-project
+  branch: main
+media_folder: "source/images/uploads"
 
-collections: # A list of collections the CMS should be able to edit
+collections:
   - label: "Sections"
     name: "sections"
     files:
