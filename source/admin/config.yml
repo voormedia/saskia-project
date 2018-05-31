@@ -3,3 +3,17 @@ backend:
   repo: repository # Path to your GitHub repository
   branch: main # Branch to update
 media_folder: "source/images/uploads" # Folder where user uploaded files should go
+
+collections: # A list of collections the CMS should be able to edit
+  - label: "Sections"
+    name: "sections"
+    files:
+      - label: "Contact"
+        name: "contact"
+        file: "data/contact.yml"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Company name, name: company-name, widget: string}
+          - {label: Company address, name: company-address, widget: markdown}
+          - {label: Phone number, name: phone, widget: string}
+          - {label: Email address, name: email, widget: string}
