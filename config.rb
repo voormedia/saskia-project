@@ -1,3 +1,8 @@
+require 'sprockets/es6'
+activate :sprockets do |s|
+  s.supported_output_extensions << '.es6'
+end
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -13,34 +18,20 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-# With alternative layout
-# page '/path/to/file.html', layout: 'other_layout'
+# Set specific Template Languages
+set :haml, { :format => :html5 }
 
-# Proxy pages
-# https://middlemanapp.com/advanced/dynamic-pages/
+set :fonts_dir,  'fonts'
 
-# proxy(
-#   '/this-page-has-no-template.html',
-#   '/template-file.html',
-#   locals: {
-#     which_fake_page: 'Rendering a fake page with a local variable'
-#   },
-# )
+# Activate pry
+activate :pry
 
-# Helpers
-# Methods defined in the helpers block are available in templates
-# https://middlemanapp.com/basics/helper-methods/
+# Per-page layout changes
+page '/*.xml', layout: false
+page '/*.json', layout: false
+page '/*.txt', layout: false
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+# Activate livereload
+activate :livereload
 
-# Build-specific configuration
-# https://middlemanapp.com/advanced/configuration/#environment-specific-settings
-
-# configure :build do
-#   activate :minify_css
-#   activate :minify_javascript
-# end
+::Rack::Mime::MIME_TYPES['.vtt'] = 'text/vtt'

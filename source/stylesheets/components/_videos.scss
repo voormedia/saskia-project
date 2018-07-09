@@ -1,0 +1,32 @@
+@function stroke($stroke, $color) {
+  $shadow: ();
+  $from: $stroke*-1;
+  @for $i from $from through $stroke {
+   @for $j from $from through $stroke {
+      $shadow: append($shadow, $i*1px $j*1px 0 $color, comma);
+    }
+  }
+  @return $shadow;
+}
+
+@mixin stroke($stroke, $color) {
+  text-shadow: stroke($stroke, $color);
+}
+
+video.fullwidth {
+  width: 100%;
+  height: auto !important;
+}
+
+video {
+  transition: opacity 1s ease-in-out;
+}
+
+video::cue {
+  background: transparent;
+  padding: 20px;
+  @include stroke(2, black);
+  padding: 10px;
+  z-index: 1000000;
+  position: relative;
+}

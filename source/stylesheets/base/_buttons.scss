@@ -1,0 +1,52 @@
+button {
+  border: 0;
+  height: 4.4rem;
+  width: 100%;
+  border-radius: 0.3rem;
+  font-family: $base-font-family;
+  font-size: 1.6rem;
+  line-height: 4.4rem;
+  cursor: pointer;
+  margin: 0 10px;
+  &.success {
+    color: white;
+    background-color: $primary-color;
+    box-shadow: 0 0.3rem 0 0 #6EAD62;
+    &:hover {
+      background-color: darken($primary-color, 7);
+    }
+  }
+}
+
+// #interactive-videos{
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   overflow: hidden;
+// }
+
+// video {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100%;
+//   opacity: 1;
+//   transition: opacity 0.2s ease;
+// }
+
+// @media (min-aspect-ratio: 16/9) {
+//   video {
+//     height: 300%;
+//     top: -100%;
+//   }
+// }
+
+// @media (max-aspect-ratio: 16/9) {
+//   video {
+//     width: 300%;
+//     left: -100%;
+//   }
+// }

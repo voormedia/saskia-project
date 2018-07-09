@@ -1,0 +1,35 @@
+#logo {
+  z-index: 1000;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  max-width: 150px;
+  transition: all 1s ease-in-out;
+  width:  100%;
+  svg {
+    fill: white;
+    width: 100%;
+    transition: all 1s ease-in-out;
+  }
+  &.active {
+    transition: all 1s ease-in-out;
+    max-width: 185px;
+    left: 110px;
+    top: 85px;
+    svg {
+      transition: all 1s ease-in-out;
+      fill: black;
+    }
+  }
+  &.loading {
+    top: 40%;
+    left: 44%;
+    max-width: 250px;
+    transform: translate(-50%, -50%);
+    transition: translate 0s ease;
+
+    svg {
+      fill: #252525;
+    }
+  }
+}

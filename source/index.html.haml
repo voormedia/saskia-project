@@ -1,0 +1,44 @@
+-# %nav.sections
+-#   %a{:href => "#section1"} Section 1
+-#   %a{:href => "#section2"} Section 2
+-#   %a{:href => "#section3"} Section 3
+-#   %a{:href => "#section4"} Section 4
+-# #fullpage
+-#   %section.section.fp-auto-height-responsive.active
+-#     .page-width
+-#       Some section
+-#   %section.section.fp-auto-height-responsive
+-#     .page-width
+-#     %video{"data-autoplay" => "", controls: "", style: "min-width: 100%; min-height: 100%;"}
+-#       -# %source{:type => "video/mp4", data: { src: "http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"}}
+-#   %section.section.fp-auto-height-responsive
+-#     .page-width
+-#       Some section
+-#   %section.section.fp-auto-height-responsive
+-#     .page-width
+-#       Some section
+#page
+  #logo.loading.animated.infinite.pulse
+    = partial("layouts/logo").html_safe
+  #social
+    %a.linkedin{href: "https://www.linkedin.com/in/saskiabonis/"}
+      %i.fa.fa-linkedin
+    %a.email{href: "mailto:saskia@bonis.nu"}
+      %i.fa.fa-envelope
+    %a.phone{href: "tel:‭+31 6 52 64 67 68‬"}
+      %i.fa.fa-phone
+  #actions-container.animated
+
+    #summary
+    #call-to-action
+      #question
+      #actions
+  #interactive-videos
+    #replay
+      %i.fa.fa-refresh
+    #countdown
+      %span
+
+#previous.animated
+  %i.fa.fa-arrow-left
+

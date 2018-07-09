@@ -1,0 +1,39 @@
+form {
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0.7rem 3.5rem 0.7rem 1.5rem;
+    width: 100%;
+    border: 0.1rem solid white;
+    border-radius: 0.2rem;
+    color: $base-font-color;
+    font-size: 1.4rem;
+    line-height: normal;
+    font-size: 1.5rem;
+    &::placeholder {
+      color: #818181;
+    }
+    transition: all ease-out 0.1s;
+    &:hover,
+    &:focus {
+      border: 0.1rem solid rgba($primary-color, 0.2);
+      background: #FAFCFE;
+      outline: none;
+    }
+  }
+  input[type="text"],
+  input[type="number"],
+  input[type="email"],
+  input[type="tel"] {
+    height: 4.4rem;
+    margin-bottom: 1rem;
+  }
+
+  textarea {
+    resize: none;
+  }
+}

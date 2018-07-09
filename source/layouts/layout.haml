@@ -1,0 +1,20 @@
+!!!
+%html
+  %head
+    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{charset: "utf-8"}/
+    %meta{content: "ie=edge", "http-equiv" => "x-ua-compatible"}/
+    %meta{content: "width=device-width, initial-scale=1, shrink-to-fit=no", name: "viewport"}/
+    %link{href: "https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,700", rel: "stylesheet"}
+    %link{href: "https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css", rel: "stylesheet"}
+    / Use the title from a page's frontmatter if it has one
+    %title= current_page.data.title || "Middleman"
+    %script{src: "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"}
+    = stylesheet_link_tag "site"
+    = stylesheet_link_tag "jquery.fullPage.css"
+
+  %body
+    = yield
+  = javascript_include_tag "site.js"
+  = javascript_include_tag "jquery.fullPage.js"
+  = javascript_include_tag "fullPageConfig.js"

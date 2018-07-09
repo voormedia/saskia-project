@@ -1,0 +1,17 @@
+/* Colors */
+$base-font-color: #222222;
+$primary-color: #5AA14D;
+$secondary-color: #184D7A;
+$white-color: #fff;
+$header-font: 'Montserrat', sans-serif;
+$base-font-family: 'Museo', sans-serif;
+
+/* Breakpoints */
+$mobile-landscape:                 400px;
+$mobile-only:                      0 785px;
+$tablet:                           512px;
+$tablet-only:                      512px 785px;
+$desktop:                          786px;
+$container:                        980px; // container max width + padding
+$wide-desktop:                     1024px;
+$wider-desktop:                    1280px;

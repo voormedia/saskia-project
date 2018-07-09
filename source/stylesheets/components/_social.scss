@@ -1,0 +1,25 @@
+#social {
+  position: absolute;
+  top: 29px;
+  right: 31px;
+  display: flex;
+  width: 100%;
+  max-width: 200px;
+  z-index: 100;
+  justify-content: space-between;
+  & a {
+    width: 58px;
+    height: 58px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    background-color: white;
+    color: #34646c;
+    border-radius: 50%;
+    cursor: pointer;
+    &.fa-phone {
+      font-size: 41px;
+    }
+  }
+}

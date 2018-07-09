@@ -1,0 +1,12 @@
+$icon-font-path: '../../fonts/' !default;
+
+@font-face {
+  font-family: 'Museo';
+  src: url('#{$icon-font-path}museosans-300-webfont.eot?');
+  src: url('#{$icon-font-path}museosans-300-webfont.eot?#iefix') format('embedded-opentype'),
+       url('#{$icon-font-path}museosans-300-webfont.woff?') format('woff'),
+       url('#{$icon-font-path}museosans-300-webfont.ttf?') format('truetype'),
+       url('#{$icon-font-path}museosans-300-webfont.svg?#museo') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

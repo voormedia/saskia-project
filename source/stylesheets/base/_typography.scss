@@ -1,0 +1,82 @@
+* {
+  font-family: $base-font-family;
+}
+h1 {
+  margin: 0 0 2rem;
+  color: $base-font-color;
+  font-family: $header-font;
+  font-size: 3.9rem;
+  font-weight: 800;
+  line-height: 5.8rem;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @media (min-width: $desktop) {
+    font-size: 5.2rem;
+  }
+}
+
+h2 {
+  margin: 0 0 3rem;
+  color: $base-font-color;
+  font-family: $header-font;
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 4rem;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @media (min-width: $desktop) {
+    font-size: 4.4rem;
+  }
+}
+
+h3 {
+  margin: 0 0 1.6rem;
+  font-family: $header-font;
+  color: #000000;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 3.6rem;
+}
+
+h4 {
+  color: #000000;
+  font-family: $header-font;
+  font-size: 2.4rem;
+  line-height: 3.6rem;
+}
+
+h5 {
+  color: #000000;
+  font-family: $header-font;
+  font-size: 1.7rem;
+  line-height: 1.7rem;
+  margin-bottom: 1.2rem;
+}
+
+p {
+  margin: 0 0 1.6rem;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-family: $header-font;
+  &.subtitle {
+    max-width: 80rem;
+    color: $primary-color;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 2.9rem;
+    margin-bottom: 3rem;
+    @media (min-width: $desktop) {
+      font-size: 2.4rem;
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+blockquote {
+  margin: 0;
+  font-family: "Museo700";
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
