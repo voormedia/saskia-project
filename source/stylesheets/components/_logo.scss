@@ -6,6 +6,8 @@
   max-width: 150px;
   transition: all 1s ease-in-out;
   width:  100%;
+  opacity: 1;
+  transition: 0.3s opacity ease-in-out;
   svg {
     fill: white;
     width: 100%;
@@ -21,15 +23,28 @@
       fill: black;
     }
   }
-  &.loading {
-    top: 40%;
-    left: 44%;
-    max-width: 250px;
-    transform: translate(-50%, -50%);
-    transition: translate 0s ease;
 
-    svg {
-      fill: #252525;
-    }
+  &.hidden {
+    opacity: 0;
+  }
+
+}
+#loader {
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #B6D6DD;
+  opacity: 1;
+  transition: 0.3s opacity ease-in-out;
+  svg {
+    fill: #252525;
+    max-width: 250px;
+  }
+  &.hidden {
+    opacity: 0;
   }
 }

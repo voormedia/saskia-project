@@ -103,9 +103,10 @@ class InteractiveVideos {
   attachEventHandlers() {
     $(window).on('resize', () => {this.resizeVideo()})
     this.log(arguments)
-    window.addEventListener('nextVideo', (e) => { this.updateCurrentVideo(e.detail) })
+    window.addEventListener('nextVideo', (e) => { this.updateCurrentVideo(e.detail, true) })
     document.getElementById('previous').addEventListener("click", (e) => { this.playPrevious() })
-    document.getElementById('replay').addEventListener("click", (e) => { this.playVideo() })
+    document.getElementById('replay').addEventListener("click", (e) => { this.playVideo(true) })
+    document.getElementById('play-button').addEventListener("click", (e) => { this.startVideo() })
   }
 
   toggleReplayButton(show) {
@@ -116,14 +117,22 @@ class InteractiveVideos {
     }
   }
 
-  playVideo() {
+  startVideo() {
+    document.getElementById('play').classList.add('hidden')
+    this.currentVideo.startVideo()
+
+  }
+
+  playVideo(play = false) {
     this.log(arguments)
     this.toggleReplayButton(false)
     this.hideActionContainer()
     this.currentVideo.play()
     setTimeout(() => this.resetActions() , 1000)
     this.startCountdown()
-
+    if (play) {
+      this.currentVideo.startVideo()
+    }
     console.log('Now playing: ', this.currentVideo)
     if (this.playList.length > 1) {
       document.getElementById('previous').classList.add('bounceInLeft')
@@ -132,13 +141,17 @@ class InteractiveVideos {
     }
   }
 
-  updateCurrentVideo(video) {
+  updateCurrentVideo(video, play = false) {
     this.log(arguments)
     if (video) {
       this.playList.push(video)
     }
+
     this.currentVideo = this.playList[this.playList.length - 1]
     this.playVideo()
+    if (play) {
+      this.currentVideo.startVideo()
+    }
   }
 
   decisionsToButtons(decisions) {
@@ -243,10 +256,16 @@ class Video {
     }
 
 
-    this.element.oncanplay = () => {$('#logo').removeClass('loading animated infinite pulse')}
+    this.element.oncanplay = () => {this.hideLoader()}
     console.log(this.element.textTracks[0])
     // this.element.style.transition = "opacity " + (this.options.delay / 1000) + "s" + " ease"
     // this.element.addEventListener('timeupdate', () => { this.updateCountdown() })
+  }
+
+  hideLoader() {
+    document.getElementById('logo').classList.remove('hidden')
+    document.getElementById('loader').classList.add('hidden')
+    setTimeout(() => document.getElementById('loader').style.display = "none" , 500)
   }
 
   decisionEventListener() {
@@ -270,8 +289,11 @@ class Video {
     this.log(arguments)
     this.buffer()
     this.element.style.opacity = 1
-    this.element.play()
     this.bufferNextVideos()
+  }
+
+  startVideo() {
+    this.element.play()
   }
 
   log(arg) {

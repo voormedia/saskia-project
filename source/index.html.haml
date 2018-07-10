@@ -18,8 +18,14 @@
 -#     .page-width
 -#       Some section
 #page
-  #logo.loading.animated.infinite.pulse
+  #loader
+    .animated.infinite.pulse
+      = partial("layouts/logo").html_safe
+  #logo.hidden
     = partial("layouts/logo").html_safe
+  #play
+    %i.fa.fa-play#play-button
+    #overlay
   #social
     %a.linkedin{href: "https://www.linkedin.com/in/saskiabonis/"}
       %i.fa.fa-linkedin
