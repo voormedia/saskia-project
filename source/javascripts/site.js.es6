@@ -243,7 +243,7 @@ class Video {
     this.element.muted = false
     this.element.style.opacity = 0
     // to remove once we have subtititles for all vids
-    if (this.src == "/images/question1.m4v") {
+    if (this.src == "/images/question1.mp4") {
       this.subtitles = document.createElement("track")
       this.subtitles.label = "English"
       this.subtitles.kind = "captions"
@@ -330,7 +330,7 @@ class Video {
 
 
 tree = {video: {
-     src: "/images/question1.m4v"
+     src: "/images/question1.mp4"
     },
     question: "Waar ligt jouw interesse in het social domein?",
     summary: ['Ik ben Saskia. Leuk dat je hier bent. Ik probeer hier iets meer over mezelf te vertellen. En ik vind het natuurlijk leuk om ook iets van jou te horen.',
@@ -340,7 +340,7 @@ tree = {video: {
     decisions: [
       {
         video: {
-         src: "/images/question1-answer1.m4v"
+         src: "/images/question1-answer1.mp4"
        },
         choice: "Leidinggeven",
         summary: ["Als leidinggevende ben ik resultaatgericht en ik geniet van het coachen van teamleden. Ik vind eigen verantwoordelijkheid en ontwikkeling erg belangrijk, blije medewerkers zorgen voor blije klanten en dan is de cirkel mooi rond.",
@@ -348,7 +348,7 @@ tree = {video: {
         decisions: [
           {
             video: {
-             src: "/images/question2.m4v"
+             src: "/images/question2.mp4"
            },
             choice: "Tell me more",
             decisions: [
@@ -376,14 +376,14 @@ tree = {video: {
       },
       {
         video: {
-         src: "/images/question1-answer2.m4v"
+         src: "/images/question1-answer2.mp4"
        },
         choice: "Innovatie",
         summary: ["Ik ken het sociaal domein als mijn broekzak, vanuit verschillende invalshoeken, en ik houd er van! "],
         decisions: [
           {
             video: {
-             src: "/images/question2.m4v"
+             src: "/images/question2.mp4"
            },
             choice: "Tell me more",
             decisions: [
@@ -405,13 +405,13 @@ tree = {video: {
       },
       {
         video: {
-         src: "/images/question1-answer3.m4v"
+         src: "/images/question1-answer3.mp4"
        },
         choice: "Mediation",
         decisions: [
           {
             video: {
-             src: "/images/question2.m4v"
+             src: "/images/question2.mp4"
            },
             choice: "Tell me more",
             decisions: [
@@ -427,13 +427,13 @@ tree = {video: {
       },
       {
         video: {
-         src: "/images/question1-answer3.m4v"
+         src: "/images/question1-answer3.mp4"
        },
         choice: "Armoede",
         decisions: [
           {
             video: {
-             src: "/images/question2.m4v"
+             src: "/images/question2.mp4"
            },
             choice: "Tell me more",
             decisions: [
