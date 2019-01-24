@@ -1,19 +1,58 @@
 //= require babel/polyfill
 
 class InteractiveVideos {
-  constructor(tree, container, options, placeholderText) {
+  constructor(tree, container, options, placeholderText, location) {
     // remove placeholder once we have content
+    this.location = location
     this.placeholderText = placeholderText
     this.container = container
     this.options = options
     this.questionContainer = document.getElementById('question')
     this.actionsContainer = document.getElementById('actions')
     this.summaryContainer = document.getElementById('summary')
-    this.playList = [this.parseTree(tree)]
+    this.setClientInformation()
+    this.filterTree(tree)
+    this.playList = [this.parseTree(this.filteredTree)]
     this.currentVideo = undefined
     this.updateCurrentVideo()
     this.attachEventHandlers()
     this.videoWidth = $('video').width()
+  }
+
+  // directlink, linkedin, ip_brabant, ip_amsterdam, ip_english_general, google
+  setClientInformation() {
+
+    this.location.city = "Amsterdam"
+    this.location.country = "The Netherlands"
+
+    if (this.location.city == "Amsterdam") {
+      this.clientInformation = "ip_amsterdam"
+    } else if (this.location.city == "Brabant") {
+      this.clientInformation = "ip_brabant"
+    } else if (this.location.country == "The Netherlands") {
+      // live
+      // const referrer = document.referrer
+
+      // test
+      // const referrer = "http://www.linkedin.com/"
+      // const referrer = "http://www.google.com/"
+      const referrer = ""
+
+      if (referrer.includes("google")) {
+        this.clientInformation = "google"
+      } else if (referrer.includes("linkedin")) {
+        this.clientInformation = "linkedin"
+      } else {
+        this.clientInformation = "directlink"
+      }
+    } else {
+      this.clientInformation = "ip_english_general"
+    }
+  }
+
+  filterTree(tree) {
+    const decisions = tree.decisions.filter(decision => typeof(decision.condition) === "undefined" || decision.condition === this.clientInformation)
+    this.filteredTree = decisions[0]
   }
 
   log(arg) {
@@ -328,130 +367,14 @@ class Video {
   // }
 }
 
+// const placeholderText = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et urna id sem ornare vehicula. Donec at hendrerit magna, ut pellentesque nibh. Ut sit amet commodo dui. Donec laoreet blandit neque ac aliquam. Vestibulum ut quam pretium, porttitor sem vel, sollicitudin nulla. Donec pretium felis vitae lectus sodales, a vehicula orci vehicula. Fusce dictum, tortor sed rutrum sodales, orci diam faucibus dolor, a pellentesque odio enim quis lacus."]
+// new InteractiveVideos(tree, 'interactive-videos', { transition: "easeIn", delay: false, countdown: false }, placeholderText)
 
-tree = {video: {
-     src: "/images/question1.mp4"
-    },
-    question: "Waar ligt jouw interesse in het social domein?",
-    summary: ['Ik ben Saskia. Leuk dat je hier bent. Ik probeer hier iets meer over mezelf te vertellen. En ik vind het natuurlijk leuk om ook iets van jou te horen.',
-              'Ik zal eerst zelf beginnen:',
-              'Zowel binnen de organisatie waar ik voor werk als naar externe partijen waarmee ik te maken krijg ben ik van nature een verbinder. Ik ben gewend contact te leggen met kwetsbare bewoners, ambtenaren en wethouders, en natuurlijk alle andere mensen die niet bij een van deze groepen horen.',
-              'Ik het sociale domein ben ik gericht op resultaat: ik kom snel tot een gedegen afweging'],
-    decisions: [
-      {
-        video: {
-         src: "/images/question1-answer1.mp4"
-       },
-        choice: "Leidinggeven",
-        summary: ["Als leidinggevende ben ik resultaatgericht en ik geniet van het coachen van teamleden. Ik vind eigen verantwoordelijkheid en ontwikkeling erg belangrijk, blije medewerkers zorgen voor blije klanten en dan is de cirkel mooi rond.",
-                  "De afgelopen jaren heb ik meerdere leidinggevende functies gehad, ik had steeds multidisciplinaire teams met daarin medewerkers van allerlei opleidingsniveau’s. Ik pas mijn stijl van leidinggeven aan aan de persoon die ik voor me heb, en kan daarbij uit ruime ervaring putten. "],
-        decisions: [
-          {
-            video: {
-             src: "/images/question2.mp4"
-           },
-            choice: "Tell me more",
-            decisions: [
-              {
-                video: {
-                 src: "step4_1"
-               },
-                choice: "Choice 1"
-              },
-              {
-                video: {
-                 src: "step4_2"
-               },
-                choice: "Choice 2"
-              },
-              {
-                video: {
-                 src: "step4_3"
-               },
-                choice: "Choice 3"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        video: {
-         src: "/images/question1-answer2.mp4"
-       },
-        choice: "Innovatie",
-        summary: ["Ik ken het sociaal domein als mijn broekzak, vanuit verschillende invalshoeken, en ik houd er van! "],
-        decisions: [
-          {
-            video: {
-             src: "/images/question2.mp4"
-           },
-            choice: "Tell me more",
-            decisions: [
-              {
-                video: {
-                 src: "step4_6"
-               },
-                choice: "Choice 1"
-              },
-              {
-                video: {
-                 src: "step4_7"
-               },
-                choice: "Choice 2"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        video: {
-         src: "/images/question1-answer3.mp4"
-       },
-        choice: "Mediation",
-        decisions: [
-          {
-            video: {
-             src: "/images/question2.mp4"
-           },
-            choice: "Tell me more",
-            decisions: [
-              {
-                video: {
-                 src: "step4_8"
-               },
-                choice: "Tell me more"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        video: {
-         src: "/images/question1-answer3.mp4"
-       },
-        choice: "Armoede",
-        decisions: [
-          {
-            video: {
-             src: "/images/question2.mp4"
-           },
-            choice: "Tell me more",
-            decisions: [
-              {
-                video: {
-                 src: "step4_8"
-               },
-                choice: "Tell me more"
-              }
-            ]
-          }
-        ]
-      }
-    ]}
-
-const placeholderText = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et urna id sem ornare vehicula. Donec at hendrerit magna, ut pellentesque nibh. Ut sit amet commodo dui. Donec laoreet blandit neque ac aliquam. Vestibulum ut quam pretium, porttitor sem vel, sollicitudin nulla. Donec pretium felis vitae lectus sodales, a vehicula orci vehicula. Fusce dictum, tortor sed rutrum sodales, orci diam faucibus dolor, a pellentesque odio enim quis lacus."]
-
-x = new InteractiveVideos(tree, 'interactive-videos', {transition: "easeIn", delay: false, countdown: false}, placeholderText)
-
-
-
+jQuery.getJSON("http://api.db-ip.com/v2/free/self", function(data) {
+  const location = {
+    country: data.countryName ? data.countryName : "",
+    city: data.city ? data.city : ""
+  }
+  const placeholderText = []
+  new InteractiveVideos(treeSaskia, 'interactive-videos', { transition: "easeIn", delay: false, countdown: false }, placeholderText, location)
+});
