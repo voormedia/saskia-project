@@ -12,7 +12,7 @@ treeSaskia = {
           video: {
             src: "/videos/01 about me 01 I want to know more about you.m4v"
           },
-          choice: "ik wil nog meer over je te weten komen",
+          choice: "MEER OVER JE WETEN",
           question: "Over welke dienst wil je meer weten?",
           decisions: [
             {
@@ -20,27 +20,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 01 fika.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Fika",
+              choice: "FIKA",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -51,7 +51,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -63,20 +63,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -87,7 +87,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -98,7 +98,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -110,21 +110,22 @@ treeSaskia = {
                 src: "/videos/02 what I do 02 vlottrekken.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Vlottrekken",
+              choice: "VLOTTREKKEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
+
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
 
                       ]
@@ -133,13 +134,13 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -153,20 +154,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -177,7 +178,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -188,7 +189,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -200,7 +201,7 @@ treeSaskia = {
                 src: "/videos/02 what I do 03 ombuigen.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Ombuigen",
+              choice: "OMBUIGEN",
               decisions: [
                 {
                   video: {
@@ -214,13 +215,13 @@ treeSaskia = {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -231,7 +232,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -243,20 +244,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -267,7 +268,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -278,7 +279,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -291,7 +292,7 @@ treeSaskia = {
           video: {
             src: "/videos/01 about me 02 what I can do for you.m4v"
           },
-          choice: "ik ben op zoek naar versterking",
+          choice: "WAT KAN JE VOOR ME BETEKENEN",
           question: "Over welke dienst wil je meer weten?",
           decisions: [
             {
@@ -299,27 +300,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 01 fika.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Fika",
+              choice: "FIKA",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -330,7 +331,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -342,20 +343,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -366,7 +367,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -377,7 +378,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -389,27 +390,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 02 vlottrekken.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Vlottrekken",
+              choice: "VLOTTREKKEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -420,7 +421,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -432,20 +433,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -456,7 +457,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -467,7 +468,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -479,27 +480,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 03 ombuigen.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Ombuigen",
+              choice: "OMBUIGEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -510,7 +511,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -522,20 +523,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -546,7 +547,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -557,7 +558,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -580,7 +581,7 @@ treeSaskia = {
           video: {
             src: "/videos/01 about me 01 I want to know more about you.m4v"
           },
-          choice: "ik wil nog meer over je te weten komen",
+          choice: "MEER OVER JE WETEN",
           question: "Over welke dienst wil je meer weten?",
           decisions: [
             {
@@ -588,27 +589,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 01 fika.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Fika",
+              choice: "FIKA",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -619,7 +620,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -631,20 +632,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -655,7 +656,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -666,7 +667,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -678,21 +679,21 @@ treeSaskia = {
                 src: "/videos/02 what I do 02 vlottrekken.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Vlottrekken",
+              choice: "VLOTTREKKEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
 
                       ]
@@ -701,13 +702,13 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -721,20 +722,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -745,7 +746,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -756,7 +757,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -768,27 +769,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 03 ombuigen.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Ombuigen",
+              choice: "OMBUIGEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -799,7 +800,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -811,20 +812,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -835,7 +836,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -846,7 +847,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -859,7 +860,7 @@ treeSaskia = {
           video: {
             src: "/videos/01 about me 02 what I can do for you.m4v"
           },
-          choice: "ik ben op zoek naar versterking",
+          choice: "WAT KAN JE VOOR ME BETEKENEN",
           question: "Over welke dienst wil je meer weten?",
           decisions: [
             {
@@ -867,27 +868,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 01 fika.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Fika",
+              choice: "FIKA",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -898,7 +899,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -910,20 +911,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -934,7 +935,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -945,7 +946,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -957,27 +958,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 02 vlottrekken.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Vlottrekken",
+              choice: "VLOTTREKKEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -988,7 +989,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1000,20 +1001,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1024,7 +1025,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1035,7 +1036,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -1047,27 +1048,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 03 ombuigen.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Ombuigen",
+              choice: "OMBUIGEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1078,7 +1079,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1090,20 +1091,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1114,7 +1115,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1125,7 +1126,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -1148,7 +1149,7 @@ treeSaskia = {
           video: {
             src: "/videos/01 about me 01 I want to know more about you.m4v"
           },
-          choice: "ik wil nog meer over je te weten komen",
+          choice: "MEER OVER JE WETEN",
           question: "Over welke dienst wil je meer weten?",
           decisions: [
             {
@@ -1156,27 +1157,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 01 fika.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Fika",
+              choice: "FIKA",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1187,7 +1188,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1199,20 +1200,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1223,7 +1224,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1234,7 +1235,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -1246,21 +1247,21 @@ treeSaskia = {
                 src: "/videos/02 what I do 02 vlottrekken.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Vlottrekken",
+              choice: "VLOTTREKKEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
 
                       ]
@@ -1269,13 +1270,13 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1289,20 +1290,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1313,7 +1314,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1324,7 +1325,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -1336,27 +1337,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 03 ombuigen.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Ombuigen",
+              choice: "OMBUIGEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1367,7 +1368,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1379,20 +1380,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1403,7 +1404,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1414,7 +1415,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -1427,7 +1428,7 @@ treeSaskia = {
           video: {
             src: "/videos/01 about me 02 what I can do for you.m4v"
           },
-          choice: "ik ben op zoek naar versterking",
+          choice: "WAT KAN JE VOOR ME BETEKENEN",
           question: "Over welke dienst wil je meer weten?",
           decisions: [
             {
@@ -1435,27 +1436,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 01 fika.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Fika",
+              choice: "FIKA",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1466,7 +1467,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1478,20 +1479,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1502,7 +1503,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1513,7 +1514,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -1525,27 +1526,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 02 vlottrekken.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Vlottrekken",
+              choice: "VLOTTREKKEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1556,7 +1557,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1568,20 +1569,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1592,7 +1593,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1603,7 +1604,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -1615,27 +1616,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 03 ombuigen.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Ombuigen",
+              choice: "OMBUIGEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1646,7 +1647,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1658,20 +1659,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1682,7 +1683,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1693,7 +1694,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -1716,7 +1717,7 @@ treeSaskia = {
           video: {
             src: "/videos/01 about me 01 I want to know more about you.m4v"
           },
-          choice: "ik wil nog meer over je te weten komen",
+          choice: "MEER OVER JE WETEN",
           question: "Over welke dienst wil je meer weten?",
           decisions: [
             {
@@ -1724,27 +1725,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 01 fika.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Fika",
+              choice: "FIKA",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1755,7 +1756,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1767,20 +1768,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1791,7 +1792,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1802,7 +1803,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -1814,21 +1815,21 @@ treeSaskia = {
                 src: "/videos/02 what I do 02 vlottrekken.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Vlottrekken",
+              choice: "VLOTTREKKEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
 
                       ]
@@ -1837,13 +1838,13 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1857,20 +1858,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1881,7 +1882,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1892,7 +1893,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -1904,27 +1905,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 03 ombuigen.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Ombuigen",
+              choice: "OMBUIGEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1935,7 +1936,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1947,20 +1948,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -1971,7 +1972,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -1982,7 +1983,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -1995,7 +1996,7 @@ treeSaskia = {
           video: {
             src: "/videos/01 about me 02 what I can do for you.m4v"
           },
-          choice: "ik ben op zoek naar versterking",
+          choice: "WAT KAN JE VOOR ME BETEKENEN",
           question: "Over welke dienst wil je meer weten?",
           decisions: [
             {
@@ -2003,27 +2004,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 01 fika.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Fika",
+              choice: "FIKA",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2034,7 +2035,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2046,20 +2047,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2070,7 +2071,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2081,7 +2082,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -2093,27 +2094,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 02 vlottrekken.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Vlottrekken",
+              choice: "VLOTTREKKEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2124,7 +2125,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2136,20 +2137,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2160,7 +2161,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2171,7 +2172,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -2183,27 +2184,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 03 ombuigen.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Ombuigen",
+              choice: "OMBUIGEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2214,7 +2215,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2226,20 +2227,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2250,7 +2251,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2261,7 +2262,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -2284,7 +2285,7 @@ treeSaskia = {
           video: {
             src: "/videos/01 about me 01 I want to know more about you.m4v"
           },
-          choice: "ik wil nog meer over je te weten komen",
+          choice: "MEER OVER JE WETEN",
           question: "Over welke dienst wil je meer weten?",
           decisions: [
             {
@@ -2292,27 +2293,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 01 fika.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Fika",
+              choice: "FIKA",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2323,7 +2324,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2335,20 +2336,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2359,7 +2360,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2370,7 +2371,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -2382,21 +2383,21 @@ treeSaskia = {
                 src: "/videos/02 what I do 02 vlottrekken.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Vlottrekken",
+              choice: "VLOTTREKKEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
 
                       ]
@@ -2405,13 +2406,13 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2425,20 +2426,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2449,7 +2450,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2460,7 +2461,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -2472,27 +2473,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 03 ombuigen.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Ombuigen",
+              choice: "OMBUIGEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2503,7 +2504,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2515,20 +2516,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2539,7 +2540,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2550,7 +2551,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -2563,7 +2564,7 @@ treeSaskia = {
           video: {
             src: "/videos/01 about me 02 what I can do for you.m4v"
           },
-          choice: "ik ben op zoek naar versterking",
+          choice: "WAT KAN JE VOOR ME BETEKENEN",
           question: "Over welke dienst wil je meer weten?",
           decisions: [
             {
@@ -2571,27 +2572,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 01 fika.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Fika",
+              choice: "FIKA",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2602,7 +2603,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2614,20 +2615,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2638,7 +2639,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2649,7 +2650,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -2661,27 +2662,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 02 vlottrekken.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Vlottrekken",
+              choice: "VLOTTREKKEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2692,7 +2693,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2704,20 +2705,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2728,7 +2729,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2739,7 +2740,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -2751,27 +2752,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 03 ombuigen.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Ombuigen",
+              choice: "OMBUIGEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2782,7 +2783,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2794,20 +2795,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2818,7 +2819,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2829,7 +2830,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -2852,7 +2853,7 @@ treeSaskia = {
           video: {
             src: "/videos/01 about me 01 I want to know more about you.m4v"
           },
-          choice: "ik wil nog meer over je te weten komen",
+          choice: "MEER OVER JE WETEN",
           question: "Over welke dienst wil je meer weten?",
           decisions: [
             {
@@ -2860,27 +2861,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 01 fika.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Fika",
+              choice: "FIKA",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2891,7 +2892,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2903,20 +2904,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2927,7 +2928,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -2938,7 +2939,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -2950,21 +2951,21 @@ treeSaskia = {
                 src: "/videos/02 what I do 02 vlottrekken.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Vlottrekken",
+              choice: "VLOTTREKKEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
 
                       ]
@@ -2973,13 +2974,13 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -2993,20 +2994,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -3017,7 +3018,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -3028,7 +3029,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -3040,27 +3041,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 03 ombuigen.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Ombuigen",
+              choice: "OMBUIGEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -3071,7 +3072,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -3083,20 +3084,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -3107,7 +3108,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -3118,7 +3119,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -3131,7 +3132,7 @@ treeSaskia = {
           video: {
             src: "/videos/01 about me 02 what I can do for you.m4v"
           },
-          choice: "ik ben op zoek naar versterking",
+          choice: "WAT KAN JE VOOR ME BETEKENEN",
           question: "Over welke dienst wil je meer weten?",
           decisions: [
             {
@@ -3139,27 +3140,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 01 fika.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Fika",
+              choice: "FIKA",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -3170,7 +3171,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -3182,20 +3183,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -3206,7 +3207,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -3217,7 +3218,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -3229,27 +3230,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 02 vlottrekken.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Vlottrekken",
+              choice: "VLOTTREKKEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 03 ombuigen.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Ombuigen",
+                      choice: "OMBUIGEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -3260,7 +3261,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -3272,20 +3273,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 03 ombuigen.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Ombuigen",
+                  choice: "OMBUIGEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -3296,7 +3297,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -3307,7 +3308,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]
@@ -3319,27 +3320,27 @@ treeSaskia = {
                 src: "/videos/02 what I do 03 ombuigen.m4v"
               },
               question: "Wil je nog meer weten?",
-              choice: "Ombuigen",
+              choice: "OMBUIGEN",
               decisions: [
                 {
                   video: {
                     src: "/videos/02 what I do 01 fika.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Fika",
+                  choice: "FIKA",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 02 vlottrekken.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Vlottrekken",
+                      choice: "VLOTTREKKEN",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -3350,7 +3351,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -3362,20 +3363,20 @@ treeSaskia = {
                     src: "/videos/02 what I do 02 vlottrekken.m4v"
                   },
                   question: "Wil je nog meer weten?",
-                  choice: "Vlottrekken",
+                  choice: "VLOTTREKKEN",
                   decisions: [
                     {
                       video: {
                         src: "/videos/02 what I do 01 fika.m4v"
                       },
                       question: "Wil je nog meer weten?",
-                      choice: "Fika",
+                      choice: "FIKA",
                       decisions: [
                         {
                           video: {
                             src: "/videos/03 contact me 02 seen all.m4v"
                           },
-                          choice: "I wil je!",
+                          choice: "IK WIL JE!",
                           decisions: [
 
                           ]
@@ -3386,7 +3387,7 @@ treeSaskia = {
                       video: {
                         src: "/videos/03 contact me 01 not seen all.m4v"
                       },
-                      choice: "I wil je!",
+                      choice: "IK WIL JE!",
                       decisions: [
 
                       ]
@@ -3397,7 +3398,7 @@ treeSaskia = {
                   video: {
                     src: "/videos/03 contact me 01 not seen all.m4v"
                   },
-                  choice: "I wil je!",
+                  choice: "IK WIL JE!",
                   decisions: [
 
                   ]

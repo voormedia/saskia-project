@@ -4,22 +4,30 @@
   right: 31px;
   display: flex;
   width: 100%;
-  max-width: 200px;
+  max-width: 106px;
   z-index: 100;
   justify-content: space-between;
   & a {
-    width: 58px;
-    height: 58px;
+    width: 29px;
+    height: 29px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 15px;
     background-color: white;
-    color: #34646c;
+    color: black;
     border-radius: 50%;
     cursor: pointer;
-    &.fa-phone {
-      font-size: 41px;
+    &.phone {
+      i {
+        font-size: 20px;
+      }
+    }
+    &.email {
+      font-size: 13px;
+    }
+    &:hover {
+      color: #34646c;
     }
   }
 }

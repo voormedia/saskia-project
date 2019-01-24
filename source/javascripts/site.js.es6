@@ -7,9 +7,9 @@ class InteractiveVideos {
     this.placeholderText = placeholderText
     this.container = container
     this.options = options
-    this.questionContainer = document.getElementById('question')
+    // this.questionContainer = document.getElementById('question')
     this.actionsContainer = document.getElementById('actions')
-    this.summaryContainer = document.getElementById('summary')
+    // this.summaryContainer = document.getElementById('summary')
     this.setClientInformation()
     this.filterTree(tree)
     this.playList = [this.parseTree(this.filteredTree)]
@@ -64,25 +64,14 @@ class InteractiveVideos {
     this.pauseAllVideos()
     this.playList.pop()
     this.updateCurrentVideo()
-
-    if (this.currentVideo.hasAlreadyBeenPlayed) {
-      this.showActionContainer()
-      this.currentVideo.element.pause()
-      this.toggleReplayButton(true)
-    } else {
-      this.playVideo()
-    }
+    this.playVideo(true)
   }
 
   resetActions() {
     this.log(arguments)
     this.questionIsShowing = false
-    this.questionContainer.innerHTML = ""
     this.actionsContainer.innerHTML = ""
-    this.summaryContainer.innerHTML = ""
-    this.appendQuestion()
     this.appendChoices()
-    this.appendSummary()
   }
 
   appendSummary() {
@@ -99,7 +88,6 @@ class InteractiveVideos {
     } else {
       this.placeholderText.map(summary => this.summaryContainer.append(this.generateParagraph(this.placeholderText)))
     }
-
   }
 
   generateParagraph(text) {
@@ -107,14 +95,6 @@ class InteractiveVideos {
     const paragraph = document.createElement("P")
     paragraph.append(text)
     return paragraph
-  }
-
-  appendQuestion() {
-    this.log(arguments)
-    if (this.currentVideo.question) {
-      this.questionContainer.append(this.currentVideo.question)
-      this.questionContainer.style.opacity = 1
-    }
   }
 
   appendChoices() {
@@ -131,7 +111,6 @@ class InteractiveVideos {
   resizeVideo() {
     const windowWidth = $( window ).width()
 
-    // console.log(videoWidth, windowWidth)
     if (this.videoWidth < windowWidth) {
       $('video').addClass('fullwidth')
     } else {
@@ -157,25 +136,27 @@ class InteractiveVideos {
   }
 
   startVideo() {
+    document.getElementById('actions-container').style.opacity = "1"
     document.getElementById('play').classList.add('hidden')
     this.currentVideo.startVideo()
-
   }
 
   playVideo(play = false) {
     this.log(arguments)
     this.toggleReplayButton(false)
-    this.hideActionContainer()
     this.currentVideo.play()
-    setTimeout(() => this.resetActions() , 1000)
+    this.resetActions()
     this.startCountdown()
     if (play) {
       this.currentVideo.startVideo()
     }
     console.log('Now playing: ', this.currentVideo)
     if (this.playList.length > 1) {
+      document.getElementById('previous').style.opacity = "1"
       document.getElementById('previous').classList.add('bounceInLeft')
+
     } else {
+      document.getElementById('previous').style.opacity = "0"
       document.getElementById('previous').classList.remove('bounceInLeft')
     }
   }
@@ -211,24 +192,6 @@ class InteractiveVideos {
     this.currentVideo.element.addEventListener('timeupdate', () => { this.updateCountdown() })
   }
 
-  showActionContainer() {
-    this.log(arguments)
-    const actionsContainer = document.getElementById('actions-container')
-    const page = document.getElementById('page')
-    actionsContainer.classList.add('slideInLeft')
-    page.classList.add('show-actions')
-    $('#logo').addClass('active')
-  }
-
-  hideActionContainer() {
-    this.log(arguments)
-    const actionsContainer = document.getElementById('actions-container')
-    const page = document.getElementById('page')
-    actionsContainer.classList.remove('slideInLeft')
-    page.classList.remove('show-actions')
-    $('#logo').removeClass('active')
-  }
-
   updateCountdown() {
     this.log(arguments)
     countdown = Math.round(this.currentVideo.element.duration - this.currentVideo.element.currentTime)
@@ -238,7 +201,6 @@ class InteractiveVideos {
     }
 
     if (countdown < 2 && !this.questionIsShowing){
-      this.showActionContainer()
       this.questionIsShowing = true
     }
 
@@ -293,7 +255,6 @@ class Video {
       // this.element.textTracks.map(track => track,)
       this.element.textTracks[0].mode = "showing"
     }
-
 
     this.element.oncanplay = () => {this.hideLoader()}
     console.log(this.element.textTracks[0])
