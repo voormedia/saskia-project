@@ -16,7 +16,8 @@ class InteractiveVideos {
     this.currentVideo = undefined
     this.updateCurrentVideo()
     this.attachEventHandlers()
-    this.videoWidth = $('video').width()
+    this.resizeVideo()
+    // this.videoWidth = $('video').width()
   }
 
   // directlink, linkedin, ip_brabant, ip_amsterdam, ip_english_general, google
@@ -110,11 +111,15 @@ class InteractiveVideos {
 
   resizeVideo() {
     const windowWidth = $( window ).width()
-
-    if (this.videoWidth < windowWidth) {
-      $('video').addClass('fullwidth')
-    } else {
+    const windowHeight = $( window ).height()
+    console.log("vid height", $('video').height())
+    console.log("window height", windowHeight)
+    if ($('video').height() < windowHeight) {
+      $('video').addClass('fullHeight')
       $('video').removeClass('fullwidth')
+    } else if ($('video').width() < windowWidth) {
+      $('video').addClass('fullwidth')
+      $('video').removeClass('fullHeight')
     }
   }
 
