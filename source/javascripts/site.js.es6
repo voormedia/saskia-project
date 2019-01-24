@@ -147,6 +147,8 @@ class InteractiveVideos {
   }
 
   playVideo(play = false) {
+    clearInterval(this.decisionIntervalId)
+    document.getElementById("progress").style.width = "0%"
     this.log(arguments)
     this.toggleReplayButton(false)
     this.currentVideo.play()
@@ -192,6 +194,15 @@ class InteractiveVideos {
     return btn
   }
 
+  decisionCountdown(interval) {
+    if (this.decisionTimer > 0) {
+      this.decisionTimer -= interval
+      document.getElementById("progress").style.width = (100 - (this.decisionTimer / 30000 * 100)) + "%"
+    } else {
+      document.getElementById('decision-0').click()
+    }
+  }
+
   startCountdown() {
     this.log(arguments)
     this.currentVideo.element.addEventListener('timeupdate', () => { this.updateCountdown() })
@@ -207,8 +218,11 @@ class InteractiveVideos {
 
     if (countdown < 2 && !this.questionIsShowing){
       this.questionIsShowing = true
-    }
 
+      this.decisionTimer = 30000
+      let interval = 10
+      this.decisionIntervalId = setInterval(() => this.decisionCountdown(interval), interval)
+    }
   }
 
   parseTree(tree) {

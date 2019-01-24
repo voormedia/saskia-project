@@ -61,6 +61,13 @@
     background-color: #34646D;
     height: 6px;
     width: 100%;
+    position: absolute;
+    #progress {
+      background-color: #b3d9e0;
+      height: 6px;
+      width: 0%;
+      position: relative;
+    }
   }
   #call-to-action {
     height: 100%;
