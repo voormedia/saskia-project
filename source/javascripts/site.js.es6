@@ -123,7 +123,12 @@ class InteractiveVideos {
   }
 
   replayAll() {
-
+    this.playPrevious()
+    this.log(arguments)
+    this.pauseAllVideos()
+    this.playList = [this.playList[0]]
+    this.updateCurrentVideo()
+    document.getElementById('play').classList.remove('hidden')
   }
 
   attachEventHandlers() {
