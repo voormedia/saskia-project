@@ -22,7 +22,6 @@ class InteractiveVideos {
 
   // directlink, linkedin, ip_brabant, ip_amsterdam, ip_english_general, google
   setClientInformation() {
-
     this.location.city = "Amsterdam"
     this.location.country = "The Netherlands"
 
@@ -121,6 +120,10 @@ class InteractiveVideos {
     }
   }
 
+  replayAll() {
+
+  }
+
   attachEventHandlers() {
     $(window).on('resize', () => {this.resizeVideo()})
     this.log(arguments)
@@ -132,6 +135,7 @@ class InteractiveVideos {
       $('#call-to-action button').removeClass('active')
       $('#call-to-action button:first-child').addClass('active')
     });
+    $('#replay-all').on('click', this.replayAll.bind(this))
     window.addEventListener('nextVideo', (e) => { this.updateCurrentVideo(e.detail, true) })
     document.getElementById('previous').addEventListener("click", (e) => { this.playPrevious() })
     document.getElementById('replay').addEventListener("click", (e) => { this.playVideo(true) })
@@ -329,7 +333,8 @@ class Video {
     this.log(arguments)
     this.buffer()
     this.element.style.opacity = 1
-    this.element.classList.add('active')
+    $(this.element).addClass('active')
+    // this.element.classList.add('active')
     this.bufferNextVideos()
   }
 
@@ -348,7 +353,9 @@ class Video {
     this.element.style.opacity = 0
     this.questionIsShowing = false
     this.hasAlreadyBeenPlayed = true
-    this.element.classList.remove("active")
+    $(this.element).removeClass('active')
+
+    // this.element.classList.remove("active")
   }
 
   bufferNextVideos() {

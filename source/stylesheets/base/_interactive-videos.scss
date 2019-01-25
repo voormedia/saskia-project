@@ -192,7 +192,8 @@
 #actions {
   opacity: 0;
   transition: 1s opacity ease;
-  // display: flex;
+  height: 100%;
+  padding-top: 6px;
   margin-top: 8px;
   // flex-wrap: wrap;
   // justify-content: center;
