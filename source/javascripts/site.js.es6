@@ -8,6 +8,7 @@ class InteractiveVideos {
     this.container = container
     this.options = options
     this.onLastVideo = false
+    this.backgroundMusic = $('audio')[0]
     this.playedVideos = []
     // this.questionContainer = document.getElementById('question')
     this.actionsContainer = document.getElementById('actions')
@@ -178,6 +179,9 @@ class InteractiveVideos {
 
   startVideo() {
     document.getElementById('play').classList.add('hidden')
+    setTimeout(() => $('#play').hide(),1000)
+    this.backgroundMusic.play()
+    this.backgroundMusic.volume = 0.15
     this.currentVideo.startVideo()
   }
 
@@ -322,7 +326,7 @@ class Video {
     this.element.src = this.src
     this.element.type = 'video/mp4'
     this.element.autoplay = false
-    this.element.muted = true
+    this.element.muted = false
     this.element.style.opacity = 0
     // to remove once we have subtititles for all vids
     if (this.src == "/images/question1.mp4") {
