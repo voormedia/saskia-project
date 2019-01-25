@@ -15,8 +15,8 @@ class InteractiveVideos {
     this.playList = [this.parseTree(this.filteredTree)]
     this.currentVideo = undefined
     this.updateCurrentVideo()
-    this.attachEventHandlers()
     this.resizeVideo()
+    this.attachEventHandlers()
     // this.videoWidth = $('video').width()
   }
 
@@ -112,12 +112,10 @@ class InteractiveVideos {
   resizeVideo() {
     const windowWidth = $( window ).width()
     const windowHeight = $( window ).height()
-    console.log("vid height", $('video').height())
-    console.log("window height", windowHeight)
-    if ($('video').height() < windowHeight) {
+    if ($('video.active').height() < windowHeight) {
       $('video').addClass('fullHeight')
       $('video').removeClass('fullwidth')
-    } else if ($('video').width() < windowWidth) {
+    } else if ($('video.active').width() < windowWidth) {
       $('video').addClass('fullwidth')
       $('video').removeClass('fullHeight')
     }
@@ -126,6 +124,14 @@ class InteractiveVideos {
   attachEventHandlers() {
     $(window).on('resize', () => {this.resizeVideo()})
     this.log(arguments)
+    $('body').on('mouseenter','#call-to-action button',function(e){
+      $('#call-to-action button').removeClass('active')
+      $(e.target).addClass('active')
+    });
+    $('body').on('mouseleave','#call-to-action button',function(e){
+      $('#call-to-action button').removeClass('active')
+      $('#call-to-action button:first-child').addClass('active')
+    });
     window.addEventListener('nextVideo', (e) => { this.updateCurrentVideo(e.detail, true) })
     document.getElementById('previous').addEventListener("click", (e) => { this.playPrevious() })
     document.getElementById('replay').addEventListener("click", (e) => { this.playVideo(true) })
@@ -152,6 +158,7 @@ class InteractiveVideos {
     this.log(arguments)
     this.toggleReplayButton(false)
     this.currentVideo.play()
+    this.resizeVideo()
     this.resetActions()
     this.startCountdown()
     if (play) {
@@ -166,6 +173,7 @@ class InteractiveVideos {
       document.getElementById('previous').style.opacity = "0"
       document.getElementById('previous').classList.remove('bounceInLeft')
     }
+
   }
 
   updateCurrentVideo(video, play = false) {
@@ -189,6 +197,9 @@ class InteractiveVideos {
     const btn = document.createElement("BUTTON")
     const choiceText = document.createTextNode(choice)
     btn.setAttribute('id', 'decision-' + index)
+    if (index == 0) {
+      btn.classList.add('active')
+    }
     btn.dataset.decision = index
     btn.appendChild(choiceText)
     return btn
@@ -225,10 +236,18 @@ class InteractiveVideos {
     }
   }
 
+  showConclusionPage(decisionsLeft) {
+    if (decisionsLeft == 0) {
+      $('#contact-page-container').addClass('active')
+    } else {
+      $('#contact-page-container').removeClass('active')
+    }
+  }
+
   parseTree(tree) {
     const decisions = tree.decisions ? tree.decisions.map(decision => this.parseTree(decision)) : []
     const buttons = this.decisionsToButtons(decisions)
-    return new Video(document.getElementById(this.container), {
+    return new Video(document.getElementById(this.container), this.showConclusionPage, {
                                                                 choice: tree.choice,
                                                                 question: tree.question,
                                                                 src: tree.video.src,
@@ -240,9 +259,10 @@ class InteractiveVideos {
 }
 
 class Video {
-  constructor(container, args) {
+  constructor(container, finalVideoCallback, args) {
     this.container = container
     this.question = args.question
+    this.finalVideoCallback = finalVideoCallback
     this.src = args.src
     this.choice = args.choice
     this.finishedLoading = false
@@ -260,7 +280,7 @@ class Video {
     this.element.src = this.src
     this.element.type = 'video/mp4'
     this.element.autoplay = false
-    this.element.muted = false
+    this.element.muted = true
     this.element.style.opacity = 0
     // to remove once we have subtititles for all vids
     if (this.src == "/images/question1.mp4") {
@@ -305,9 +325,11 @@ class Video {
   }
 
   play() {
+    this.finalVideoCallback(this.decisions.length)
     this.log(arguments)
     this.buffer()
     this.element.style.opacity = 1
+    this.element.classList.add('active')
     this.bufferNextVideos()
   }
 
@@ -326,6 +348,7 @@ class Video {
     this.element.style.opacity = 0
     this.questionIsShowing = false
     this.hasAlreadyBeenPlayed = true
+    this.element.classList.remove("active")
   }
 
   bufferNextVideos() {

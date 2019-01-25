@@ -48,6 +48,7 @@
 #actions-container {
   position: absolute;
   z-index: 100;
+  overflow: hidden;
   // width: 55%;
   opacity: 0;
   height: 80px;
@@ -147,8 +148,7 @@
   width: 128px;
   height: 128px;
   border-radius: 50%;
-  background-color: rgb(52, 100, 109)
-  ;
+  background-color: rgb(52, 100, 109);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -218,6 +218,17 @@
       border: 2px solid white;
       transform: scale(1.05);
     }
+
+    &.active {
+      border: 2px solid white;
+    }
+    // &#decision-0 {
+    //   border: 2px solid white;
+    // }
+    // &:hover + #decision-0 {
+    //   border: none !important;
+    //   // border: 2px solid white;
+    // }
     &:focus {
       outline:0;
     }

@@ -1,0 +1,98 @@
+#contact-page-container {
+  height: 100%;
+  width: 100%;
+  background-color: #B6D6DD;
+  opacity: 0;
+  transition: 0.5s opacity ease;
+
+  &.active {
+    z-index: 1000;
+    opacity: 1;
+    transition: 0.5s opacity ease;
+  }
+  #contact-page {
+    display: flex;
+    max-width: 1080px;
+    margin: 0 auto;
+    #info {
+      width: 50%;
+      padding: 10% 1% 0% 2%;
+      justify-content: space-between;
+      flex-direction: column;
+      display: flex;
+      h2,
+      h3,
+      p {
+        color: #34646D;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 25px;
+        line-height: 36px;
+      }
+
+      h3 {
+        font-size: 18px;
+        line-height: 23px;
+        font-weight: normal;
+      }
+
+      p {
+        font-size: 14px;
+        &.cta{
+          font-weight: bold;
+        }
+      }
+
+    }
+    #replay-all {
+      padding: 10% 1% 0% 1%;
+      width: 50%;
+      justify-content: space-between;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      a {
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+      }
+    }
+  }
+}
+
+#page {
+  height: 100%;
+}
+.buttons-container,
+#replay-all {
+  a {
+    background: white;
+    border-radius: 23px;
+    border: 2px solid white;
+    width: 50%;
+    text-align: center;
+    color: #34646D;
+    font-size: 19px;
+    font-family: "Museo";
+    font-weight: bold;
+    padding: 8px 25px;
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+  .contact-buttons {
+    width: 60%;
+    padding-right: 5%;
+  }
+  .replay-all {
+    width: 40%;
+    padding-left: 5%;
+  }
+}
+
+.buttons-container {
+  display: flex;
+  margin-top: 40px;
+}
