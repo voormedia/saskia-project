@@ -22,21 +22,23 @@ class InteractiveVideos {
 
   // directlink, linkedin, ip_brabant, ip_amsterdam, ip_english_general, google
   setClientInformation() {
-    this.location.city = "Amsterdam"
-    this.location.country = "The Netherlands"
+    // test
+    // this.location.city = "Amsterdam"
+    // this.location.country = "The Netherlands"
 
     if (this.location.city == "Amsterdam") {
       this.clientInformation = "ip_amsterdam"
     } else if (this.location.city == "Brabant") {
       this.clientInformation = "ip_brabant"
     } else if (this.location.country == "The Netherlands") {
+
       // live
-      // const referrer = document.referrer
+      const referrer = document.referrer
 
       // test
       // const referrer = "http://www.linkedin.com/"
       // const referrer = "http://www.google.com/"
-      const referrer = ""
+      // const referrer = ""
 
       if (referrer.includes("google")) {
         this.clientInformation = "google"
