@@ -196,6 +196,7 @@ class InteractiveVideos {
     console.log('Now playing: ', this.currentVideo)
     if (this.playList.length > 1) {
       setTimeout(() => this.resetActions(), 500)
+      document.getElementById('actions-container').style.opacity = "0"
       document.getElementById('actions-container').classList.remove('slideInUp')
       document.getElementById('actions-container').classList.add('slideOutDown')
 
