@@ -151,7 +151,6 @@ class InteractiveVideos {
   }
 
   startVideo() {
-    document.getElementById('actions-container').style.opacity = "1"
     document.getElementById('play').classList.add('hidden')
     this.currentVideo.startVideo()
   }
@@ -163,17 +162,22 @@ class InteractiveVideos {
     this.toggleReplayButton(false)
     this.currentVideo.play()
     this.resizeVideo()
-    this.resetActions()
+
     this.startCountdown()
     if (play) {
       this.currentVideo.startVideo()
     }
     console.log('Now playing: ', this.currentVideo)
     if (this.playList.length > 1) {
+      setTimeout(() => this.resetActions(), 500)
+      document.getElementById('actions-container').classList.remove('slideInUp')
+      document.getElementById('actions-container').classList.add('slideOutDown')
+
       document.getElementById('previous').style.opacity = "1"
       document.getElementById('previous').classList.add('bounceInLeft')
 
     } else {
+      this.resetActions()
       document.getElementById('previous').style.opacity = "0"
       document.getElementById('previous').classList.remove('bounceInLeft')
     }
@@ -212,7 +216,7 @@ class InteractiveVideos {
   decisionCountdown(interval) {
     if (this.decisionTimer > 0) {
       this.decisionTimer -= interval
-      document.getElementById("progress").style.width = (100 - (this.decisionTimer / 30000 * 100)) + "%"
+      document.getElementById("progress").style.width = (100 - (this.decisionTimer / this.decisionTotal * 100)) + "%"
     } else {
       document.getElementById('decision-0').click()
     }
@@ -231,10 +235,12 @@ class InteractiveVideos {
       timeSpan.innerText = countdown
     }
 
-    if (countdown < 2 && !this.questionIsShowing){
+    if (countdown < 10 && !this.questionIsShowing){
       this.questionIsShowing = true
-
-      this.decisionTimer = 30000
+      document.getElementById('actions-container').style.opacity = 1
+      document.getElementById('actions-container').classList.remove('slideOutDown')
+      document.getElementById('actions-container').classList.add('slideInUp')
+      this.decisionTimer = this.decisionTotal = (this.currentVideo.element.duration >= 10 ? 10000 : this.currentVideo.element.duration * 1000)
       let interval = 10
       this.decisionIntervalId = setInterval(() => this.decisionCountdown(interval), interval)
     }
