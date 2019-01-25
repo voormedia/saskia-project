@@ -333,8 +333,7 @@ class Video {
     this.log(arguments)
     this.buffer()
     this.element.style.opacity = 1
-    $(this.element).addClass('active')
-    // this.element.classList.add('active')
+    this.element.classList.add('active')
     this.bufferNextVideos()
   }
 
@@ -353,9 +352,7 @@ class Video {
     this.element.style.opacity = 0
     this.questionIsShowing = false
     this.hasAlreadyBeenPlayed = true
-    $(this.element).removeClass('active')
-
-    // this.element.classList.remove("active")
+    this.element.classList.remove("active")
   }
 
   bufferNextVideos() {
