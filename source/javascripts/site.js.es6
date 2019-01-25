@@ -197,7 +197,7 @@ class InteractiveVideos {
     if (this.playList.length > 1) {
       setTimeout(() => this.resetActions(), 500)
       document.getElementById('actions-container').classList.remove('slideInUp')
-      // document.getElementById('actions-container').classList.add('slideOutDown')
+      document.getElementById('actions-container').classList.add('slideOutDown')
 
       document.getElementById('previous').style.opacity = "1"
       document.getElementById('previous').classList.add('bounceInLeft')
