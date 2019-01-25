@@ -7,6 +7,8 @@ class InteractiveVideos {
     this.placeholderText = placeholderText
     this.container = container
     this.options = options
+    this.onLastVideo = false
+    this.playedVideos = []
     // this.questionContainer = document.getElementById('question')
     this.actionsContainer = document.getElementById('actions')
     // this.summaryContainer = document.getElementById('summary')
@@ -64,6 +66,7 @@ class InteractiveVideos {
   playPrevious() {
     this.log(arguments)
     this.pauseAllVideos()
+    this.currentVideo.hasAlreadyBeenPlayed = false
     this.playList.pop()
     this.updateCurrentVideo()
     this.playVideo(true)
@@ -102,6 +105,22 @@ class InteractiveVideos {
   appendChoices() {
     this.log(arguments)
     this.currentVideo.buttons.map(element => this.actionsContainer.append(element))
+    let choice = this.playList[this.playList.length - 1].choice
+    if (choice && this.playList.length > 2) {
+      const playedButton = document.createElement("span")
+      const choiceText = document.createTextNode(choice)
+      const checkIcon = document.createElement("i")
+      checkIcon.classList.add('fa')
+      checkIcon.classList.add('fa-check')
+      playedButton.classList.add('active')
+      playedButton.appendChild(checkIcon)
+      playedButton.appendChild(choiceText)
+      this.playedVideos.push(playedButton)
+
+      this.playedVideos.forEach(function (playedButton) {
+        this.actionsContainer.prepend(playedButton)
+      }.bind(this));
+    }
     this.actionsContainer.style.opacity = 1
   }
 
@@ -178,7 +197,7 @@ class InteractiveVideos {
     if (this.playList.length > 1) {
       setTimeout(() => this.resetActions(), 500)
       document.getElementById('actions-container').classList.remove('slideInUp')
-      document.getElementById('actions-container').classList.add('slideOutDown')
+      // document.getElementById('actions-container').classList.add('slideOutDown')
 
       document.getElementById('previous').style.opacity = "1"
       document.getElementById('previous').classList.add('bounceInLeft')
@@ -188,7 +207,6 @@ class InteractiveVideos {
       document.getElementById('previous').style.opacity = "0"
       document.getElementById('previous').classList.remove('bounceInLeft')
     }
-
   }
 
   updateCurrentVideo(video, play = false) {
@@ -245,18 +263,24 @@ class InteractiveVideos {
     if (countdown < 10 && !this.questionIsShowing){
       this.questionIsShowing = true
       document.getElementById('actions-container').style.opacity = 1
-      document.getElementById('actions-container').classList.remove('slideOutDown')
-      document.getElementById('actions-container').classList.add('slideInUp')
-      this.decisionTimer = this.decisionTotal = (this.currentVideo.element.duration >= 10 ? 10000 : this.currentVideo.element.duration * 1000)
-      let interval = 10
-      this.decisionIntervalId = setInterval(() => this.decisionCountdown(interval), interval)
+      if (!this.onLastVideo) {
+        document.getElementById('actions-container').classList.remove('slideOutDown')
+        document.getElementById('actions-container').classList.add('slideInUp')
+        this.decisionTimer = this.decisionTotal = (this.currentVideo.element.duration >= 10 ? 10000 : this.currentVideo.element.duration * 1000)
+        let interval = 10
+        this.decisionIntervalId = setInterval(() => this.decisionCountdown(interval), interval)
+      }
     }
   }
 
   showConclusionPage(decisionsLeft) {
     if (decisionsLeft == 0) {
-      $('#contact-page-container').addClass('active')
+      this.onLastVideo = true
+      setTimeout(function() {
+        $('#contact-page-container').addClass('active')
+      }, this.currentVideo.element.duration * 1000)
     } else {
+      this.onLastVideo = false
       $('#contact-page-container').removeClass('active')
     }
   }
@@ -264,7 +288,7 @@ class InteractiveVideos {
   parseTree(tree) {
     const decisions = tree.decisions ? tree.decisions.map(decision => this.parseTree(decision)) : []
     const buttons = this.decisionsToButtons(decisions)
-    return new Video(document.getElementById(this.container), this.showConclusionPage, {
+    return new Video(document.getElementById(this.container), this.showConclusionPage.bind(this), {
                                                                 choice: tree.choice,
                                                                 question: tree.question,
                                                                 src: tree.video.src,

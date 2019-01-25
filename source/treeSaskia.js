@@ -6,7 +6,6 @@ treeSaskia = {
       },
       condition: "directlink",
       question: "Wat kan ik voor je doen?",
-      choice: "Default",
       decisions: [
         {
           video: {
@@ -575,7 +574,6 @@ treeSaskia = {
       },
       condition: "linkedin",
       question: "Wat kan ik voor je doen?",
-      choice: "Default",
       decisions: [
         {
           video: {
@@ -1143,7 +1141,6 @@ treeSaskia = {
       },
       condition: "ip_brabant",
       question: "Wat kan ik voor je doen?",
-      choice: "Default",
       decisions: [
         {
           video: {
@@ -1711,7 +1708,6 @@ treeSaskia = {
       },
       condition: "ip_amsterdam",
       question: "Wat kan ik voor je doen?",
-      choice: "Default",
       decisions: [
         {
           video: {
@@ -2279,7 +2275,6 @@ treeSaskia = {
       },
       condition: "ip_english_general",
       question: "Wat kan ik voor je doen?",
-      choice: "Default",
       decisions: [
         {
           video: {
@@ -2847,7 +2842,6 @@ treeSaskia = {
       },
       condition: "google",
       question: "Wat kan ik voor je doen?",
-      choice: "Default",
       decisions: [
         {
           video: {

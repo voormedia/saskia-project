@@ -198,6 +198,20 @@
   // flex-wrap: wrap;
   // justify-content: center;
   text-align: center;
+  span.active {
+    color: #FFFFFF;
+    font-family: "Helvetica";
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    padding: 0 5%;
+    opacity: 0.5;
+    i {
+      margin-right: 12px;
+    }
+  }
   button {
     background: transparent;
     padding: 0 5%;
