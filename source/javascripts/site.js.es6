@@ -69,7 +69,7 @@ class InteractiveVideos {
     this.pauseAllVideos()
     this.currentVideo.hasAlreadyBeenPlayed = false
     this.playList.pop()
-    this.updateCurrentVideo()
+    this.updateCurrentVideo(null, false, true)
     this.playVideo(true)
   }
 
@@ -108,16 +108,6 @@ class InteractiveVideos {
     this.currentVideo.buttons.map(element => this.actionsContainer.append(element))
     let choice = this.playList[this.playList.length - 1].choice
     if (choice && this.playList.length > 2) {
-      const playedButton = document.createElement("span")
-      const choiceText = document.createTextNode(choice)
-      const checkIcon = document.createElement("i")
-      checkIcon.classList.add('fa')
-      checkIcon.classList.add('fa-check')
-      playedButton.classList.add('active')
-      playedButton.appendChild(checkIcon)
-      playedButton.appendChild(choiceText)
-      this.playedVideos.push(playedButton)
-
       this.playedVideos.forEach(function (playedButton) {
         this.actionsContainer.prepend(playedButton)
       }.bind(this));
@@ -143,12 +133,13 @@ class InteractiveVideos {
   }
 
   replayAll() {
-    this.playPrevious()
     this.log(arguments)
     this.pauseAllVideos()
     this.playList = [this.playList[0]]
+    this.playedVideos = []
     this.updateCurrentVideo()
     document.getElementById('play').classList.remove('hidden')
+
   }
 
   attachEventHandlers() {
@@ -185,7 +176,7 @@ class InteractiveVideos {
     this.currentVideo.startVideo()
   }
 
-  playVideo(play = false) {
+  playVideo(play = false, previous = false) {
     clearInterval(this.decisionIntervalId)
     document.getElementById("progress").style.width = "0%"
     this.log(arguments)
@@ -194,8 +185,29 @@ class InteractiveVideos {
     this.resizeVideo()
 
     this.startCountdown()
+
     if (play) {
       this.currentVideo.startVideo()
+    }
+
+    if (!play) {
+      if (previous) {
+        this.playedVideos.pop()
+      } else {
+        let choice = this.playList[this.playList.length - 1].choice
+
+        if (choice && this.playList.length > 2) {
+          const playedButton = document.createElement("span")
+          const choiceText = document.createTextNode(choice)
+          const checkIcon = document.createElement("i")
+          checkIcon.classList.add('fa')
+          checkIcon.classList.add('fa-check')
+          playedButton.classList.add('active')
+          playedButton.appendChild(checkIcon)
+          playedButton.appendChild(choiceText)
+          this.playedVideos.push(playedButton)
+        }
+      }
     }
     console.log('Now playing: ', this.currentVideo)
     if (this.playList.length > 1) {
@@ -214,14 +226,14 @@ class InteractiveVideos {
     }
   }
 
-  updateCurrentVideo(video, play = false) {
+  updateCurrentVideo(video, play = false, previous = false) {
     this.log(arguments)
     if (video) {
       this.playList.push(video)
     }
 
     this.currentVideo = this.playList[this.playList.length - 1]
-    this.playVideo()
+    this.playVideo(false, previous)
     if (play) {
       this.currentVideo.startVideo()
     }
