@@ -2,47 +2,38 @@
 
 class InteractiveVideos {
   constructor(tree, container, options, placeholderText, location) {
-    // remove placeholder once we have content
     this.location = location
     this.placeholderText = placeholderText
     this.container = container
     this.options = options
     this.onLastVideo = false
     this.backgroundMusic = $('audio')[0]
-    this.playedVideos = []
-    // this.questionContainer = document.getElementById('question')
+    this.playedVideosButtons = []
     this.actionsContainer = document.getElementById('actions')
-    // this.summaryContainer = document.getElementById('summary')
     this.setClientInformation()
-    this.filterTree(tree)
+    this.getFilteredTree(tree)
     this.playList = [this.parseTree(this.filteredTree)]
     this.currentVideo = undefined
     this.updateCurrentVideo()
-    this.resizeVideo()
     this.attachEventHandlers()
-    // this.videoWidth = $('video').width()
   }
 
-  // directlink, linkedin, ip_brabant, ip_amsterdam, ip_english_general, google
   setClientInformation() {
     // test
     // this.location.city = "Amsterdam"
     // this.location.country = "The Netherlands"
-
     if (this.location.city == "Amsterdam") {
       this.clientInformation = "ip_amsterdam"
     } else if (this.location.city == "Brabant") {
       this.clientInformation = "ip_brabant"
     } else if (this.location.country == "The Netherlands") {
 
-      // live
       const referrer = document.referrer
 
       // test
       // const referrer = "http://www.linkedin.com/"
       // const referrer = "http://www.google.com/"
       // const referrer = ""
-
       if (referrer.includes("google")) {
         this.clientInformation = "google"
       } else if (referrer.includes("linkedin")) {
@@ -55,60 +46,29 @@ class InteractiveVideos {
     }
   }
 
-  filterTree(tree) {
+  getFilteredTree(tree) {
     const decisions = tree.decisions.filter(decision => typeof(decision.condition) === "undefined" || decision.condition === this.clientInformation)
     this.filteredTree = decisions[0]
   }
 
-  log(arg) {
-    console.log(this.constructor.name, arg.callee.name, "()")
-  }
-
   playPrevious() {
-    this.log(arguments)
     this.pauseAllVideos()
-    this.currentVideo.hasAlreadyBeenPlayed = false
     this.playList.pop()
     this.updateCurrentVideo(null, false, true)
     this.playVideo(true)
   }
 
-  resetActions() {
-    this.log(arguments)
+  resetDecisions() {
     this.questionIsShowing = false
     this.actionsContainer.innerHTML = ""
-    this.appendChoices()
+    this.appendDecisions()
   }
 
-  appendSummary() {
-    this.log(arguments)
-    // Remove else statement once we have content
-    if (this.currentVideo.choice) {
-      const header = document.createElement("H2")
-      const title = document.createTextNode(this.currentVideo.choice)
-      header.appendChild(title)
-      this.summaryContainer.append(header)
-    }
-    if (this.currentVideo.summary != undefined) {
-      this.currentVideo.summary.map(summary => this.summaryContainer.append(this.generateParagraph(summary)))
-    } else {
-      this.placeholderText.map(summary => this.summaryContainer.append(this.generateParagraph(this.placeholderText)))
-    }
-  }
-
-  generateParagraph(text) {
-    this.log(arguments)
-    const paragraph = document.createElement("P")
-    paragraph.append(text)
-    return paragraph
-  }
-
-  appendChoices() {
-    this.log(arguments)
+  appendDecisions() {
     this.currentVideo.buttons.map(element => this.actionsContainer.append(element))
     let choice = this.playList[this.playList.length - 1].choice
     if (choice && this.playList.length > 2) {
-      this.playedVideos.forEach(function (playedButton) {
+      this.playedVideosButtons.forEach(function (playedButton) {
         this.actionsContainer.prepend(playedButton)
       }.bind(this));
     }
@@ -116,7 +76,6 @@ class InteractiveVideos {
   }
 
   pauseAllVideos() {
-    this.log(arguments)
     this.playList.map(video => video.stop())
   }
 
@@ -133,18 +92,16 @@ class InteractiveVideos {
   }
 
   replayAll() {
-    this.log(arguments)
     this.pauseAllVideos()
     this.playList = [this.playList[0]]
-    this.playedVideos = []
+    this.playedVideosButtons = []
     this.updateCurrentVideo()
     document.getElementById('play').classList.remove('hidden')
-
+    $('#play').show()
   }
 
   attachEventHandlers() {
     $(window).on('resize', () => {this.resizeVideo()})
-    this.log(arguments)
     $('body').on('mouseenter','#call-to-action button',function(e){
       $('#call-to-action button').removeClass('active')
       $(e.target).addClass('active')
@@ -160,14 +117,6 @@ class InteractiveVideos {
     document.getElementById('play-button').addEventListener("click", (e) => { this.startVideo() })
   }
 
-  toggleReplayButton(show) {
-    if (show) {
-      document.getElementById('replay').style.opacity = 1;
-    } else {
-      document.getElementById('replay').style.opacity = 0;
-    }
-  }
-
   startVideo() {
     document.getElementById('play').classList.add('hidden')
     setTimeout(() => $('#play').hide(),1000)
@@ -178,40 +127,27 @@ class InteractiveVideos {
 
   playVideo(play = false, previous = false) {
     clearInterval(this.decisionIntervalId)
-    document.getElementById("progress").style.width = "0%"
-    this.log(arguments)
-    this.toggleReplayButton(false)
+    setTimeout(() => document.getElementById("progress").style.width = "100%" ,1000)
+
     this.currentVideo.play()
     this.resizeVideo()
-
     this.startCountdown()
 
-    if (play) {
-      this.currentVideo.startVideo()
-    }
+    if (play) { this.currentVideo.startVideo()}
 
     if (!play) {
       if (previous) {
-        this.playedVideos.pop()
+        this.playedVideosButtons.pop()
       } else {
         let choice = this.playList[this.playList.length - 1].choice
-
         if (choice && this.playList.length > 2) {
-          const playedButton = document.createElement("span")
-          const choiceText = document.createTextNode(choice)
-          const checkIcon = document.createElement("i")
-          checkIcon.classList.add('fa')
-          checkIcon.classList.add('fa-check')
-          playedButton.classList.add('active')
-          playedButton.appendChild(checkIcon)
-          playedButton.appendChild(choiceText)
-          this.playedVideos.push(playedButton)
+         this.generatePlayedDecisionsButtons(choice)
         }
       }
     }
-    console.log('Now playing: ', this.currentVideo)
+
     if (this.playList.length > 1) {
-      setTimeout(() => this.resetActions(), 500)
+      setTimeout(() => this.resetDecisions(), 500)
       document.getElementById('actions-container').style.opacity = "0"
       document.getElementById('actions-container').classList.remove('slideInUp')
       document.getElementById('actions-container').classList.add('slideOutDown')
@@ -220,23 +156,29 @@ class InteractiveVideos {
       document.getElementById('previous').classList.add('bounceInLeft')
 
     } else {
-      this.resetActions()
+      this.resetDecisions()
       document.getElementById('previous').style.opacity = "0"
       document.getElementById('previous').classList.remove('bounceInLeft')
     }
   }
 
-  updateCurrentVideo(video, play = false, previous = false) {
-    this.log(arguments)
-    if (video) {
-      this.playList.push(video)
-    }
+  generatePlayedDecisionsButtons(choice) {
+    const playedButton = document.createElement("span")
+    const choiceText = document.createTextNode(choice)
+    const checkIcon = document.createElement("i")
+    checkIcon.classList.add('fa')
+    checkIcon.classList.add('fa-check')
+    playedButton.classList.add('active')
+    playedButton.appendChild(checkIcon)
+    playedButton.appendChild(choiceText)
+    this.playedVideosButtons.push(playedButton)
+  }
 
+  updateCurrentVideo(video, play = false, previous = false) {
+    if (video) { this.playList.push(video) }
     this.currentVideo = this.playList[this.playList.length - 1]
     this.playVideo(false, previous)
-    if (play) {
-      this.currentVideo.startVideo()
-    }
+    if (play) { this.currentVideo.startVideo()}
   }
 
   decisionsToButtons(decisions) {
@@ -247,30 +189,26 @@ class InteractiveVideos {
     const btn = document.createElement("BUTTON")
     const choiceText = document.createTextNode(choice)
     btn.setAttribute('id', 'decision-' + index)
-    if (index == 0) {
-      btn.classList.add('active')
-    }
+    if (index == 0) { btn.classList.add('active')}
     btn.dataset.decision = index
     btn.appendChild(choiceText)
     return btn
   }
 
+  startCountdown() {
+    this.currentVideo.element.addEventListener('timeupdate', () => { this.updateCountdown() })
+  }
+
   decisionCountdown(interval) {
     if (this.decisionTimer > 0) {
       this.decisionTimer -= interval
-      document.getElementById("progress").style.width = (100 - (this.decisionTimer / this.decisionTotal * 100)) + "%"
+      document.getElementById("progress").style.width = (0 + (this.decisionTimer / this.decisionTotal * 100)) + "%"
     } else {
       document.getElementById('decision-0').click()
     }
   }
 
-  startCountdown() {
-    this.log(arguments)
-    this.currentVideo.element.addEventListener('timeupdate', () => { this.updateCountdown() })
-  }
-
   updateCountdown() {
-    this.log(arguments)
     countdown = Math.round(this.currentVideo.element.duration - this.currentVideo.element.currentTime)
     if (this.options.countdown) {
       const timeSpan = document.querySelector('#countdown span')
@@ -308,7 +246,7 @@ class InteractiveVideos {
     return new Video(document.getElementById(this.container), this.showConclusionPage.bind(this), {
                                                                 choice: tree.choice,
                                                                 question: tree.question,
-                                                                src: tree.video.src,
+                                                                src: tree.video,
                                                                 decisions: decisions,
                                                                 buttons: buttons,
                                                                 summary: tree.summary
@@ -316,117 +254,7 @@ class InteractiveVideos {
   }
 }
 
-class Video {
-  constructor(container, finalVideoCallback, args) {
-    this.container = container
-    this.question = args.question
-    this.finalVideoCallback = finalVideoCallback
-    this.src = args.src
-    this.choice = args.choice
-    this.finishedLoading = false
-    this.decisions = args.decisions
-    this.buttons = args.buttons
-    this.summary = args.summary
-    this.hasAlreadyBeenPlayed = false
-    console.log(this)
-    this.decisionEventListener()
-  }
 
-  initVideo() {
-    this.log(arguments)
-    this.element = document.createElement("video")
-    this.element.src = this.src
-    this.element.type = 'video/mp4'
-    this.element.autoplay = false
-    this.element.muted = false
-    this.element.style.opacity = 0
-    // to remove once we have subtititles for all vids
-    if (this.src == "/images/question1.mp4") {
-      this.subtitles = document.createElement("track")
-      this.subtitles.label = "English"
-      this.subtitles.kind = "captions"
-      this.subtitles.default = "true"
-      this.subtitles.srclang = "en"
-      this.subtitles.src = '/javascripts/question1.vtt'
-      this.element.append(this.subtitles)
-      // this.element.textTracks.map(track => track,)
-      this.element.textTracks[0].mode = "showing"
-    }
-
-    this.element.oncanplay = () => {this.hideLoader()}
-    console.log(this.element.textTracks[0])
-    // this.element.style.transition = "opacity " + (this.options.delay / 1000) + "s" + " ease"
-    // this.element.addEventListener('timeupdate', () => { this.updateCountdown() })
-  }
-
-  hideLoader() {
-    document.getElementById('logo').classList.remove('hidden')
-    document.getElementById('loader').classList.add('hidden')
-    setTimeout(() => document.getElementById('loader').style.display = "none" , 500)
-  }
-
-  decisionEventListener() {
-    this.buttons.map(button =>
-      button.addEventListener("click", (e) => {
-        this.stop()
-        window.dispatchEvent( new CustomEvent('nextVideo', { detail: this.decisions[e.target.dataset.decision] }) )
-      })
-    )
-  }
-
-  buffer() {
-    if (this.element == undefined) {
-      this.log(arguments)
-      this.initVideo()
-      this.container.appendChild(this.element)
-    }
-  }
-
-  play() {
-    this.finalVideoCallback(this.decisions.length)
-    this.log(arguments)
-    this.buffer()
-    this.element.style.opacity = 1
-    this.element.classList.add('active')
-    this.bufferNextVideos()
-  }
-
-  startVideo() {
-    this.element.play()
-  }
-
-  log(arg) {
-    console.log(this.constructor.name,arg.callee.name, "()")
-  }
-
-  stop() {
-    this.log(arguments)
-    this.element.pause()
-    this.element.currentTime = 0
-    this.element.style.opacity = 0
-    this.questionIsShowing = false
-    this.hasAlreadyBeenPlayed = true
-    this.element.classList.remove("active")
-  }
-
-  bufferNextVideos() {
-    this.log(arguments)
-    if (this.element.readyState == 4) {
-      this.decisions.map(decision => decision.buffer())
-    } else {
-      this.element.addEventListener('canplaythrough', () => { this.decisions.map(decision => decision.buffer())})
-    }
-  }
-
-  // updateCountdown() {
-  //   const timeSpan = document.querySelector('#countdown span')
-  //   countdown = Math.round(this.element.duration - this.element.currentTime)
-  //   if (countdown < 5 && !this.questionIsShowing){
-  //     this.questionIsShowing = true
-  //   }
-  //   timeSpan.innerText = countdown
-  // }
-}
 
 // const placeholderText = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et urna id sem ornare vehicula. Donec at hendrerit magna, ut pellentesque nibh. Ut sit amet commodo dui. Donec laoreet blandit neque ac aliquam. Vestibulum ut quam pretium, porttitor sem vel, sollicitudin nulla. Donec pretium felis vitae lectus sodales, a vehicula orci vehicula. Fusce dictum, tortor sed rutrum sodales, orci diam faucibus dolor, a pellentesque odio enim quis lacus."]
 // new InteractiveVideos(tree, 'interactive-videos', { transition: "easeIn", delay: false, countdown: false }, placeholderText)

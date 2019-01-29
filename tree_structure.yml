@@ -1,0 +1,84 @@
+level_3: &level_3
+  - decision:
+    - video: "IK WIL JE!"
+
+level_2: &level_2
+  - decision:
+    - video: "FIKA"
+    - decisions:
+      - decision:
+        - video: "OMBUIGEN"
+        - decisions:
+          - decision:
+            - video: "VLOTTREKEN"
+            - decisions: *level_3
+      - decision:
+        - video: "VLOTTREKEN"
+        - decisions:
+          - decision:
+            - video: "OMBUIGEN"
+            - decisions: *level_3
+  - decision:
+    - video: "VLOTTREKEN"
+    - decisions:
+      - decision:
+        - video: "OMBUIGEN"
+        - decisions:
+          - decision:
+            - video: "FIKA"
+            - decisions: *level_3
+      - decision:
+        - video: "FIKA"
+        - decisions:
+          - decision:
+            - video: "OMBUIGEN"
+            - decisions: *level_3
+  - decision:
+    - video: "OMBUIGEN"
+    - decisions:
+      - decision:
+        - video: "FIKA"
+        - decisions:
+          - decision:
+            - video: "VLOTTREKEN"
+            - decisions: *level_3
+      - decision:
+        - video: "VLOTTREKEN"
+        - decisions:
+          - decision:
+            - video: "FIKA"
+            - decisions: *level_3
+
+level_1: &level_1
+  - decision:
+    - video: "MEER OVER JE WETEN"
+    - decisions: *level_2
+  - decision:
+    - video: "WAT KAN JE VOOR ME BETEKENEN"
+    - decisions: *level_2
+
+level_0:
+  - decision:
+    - video: "00 Introduction 01 direct link.mp4"
+    - condition: "directlink"
+    - decisions: *level_1
+  - decision:
+    - video: "00 Introduction 02 linkedin.mp4"
+    - condition: "linkedin"
+    - decisions: *level_1
+  - decision:
+    - video: "00 Introduction 03 IP Brabant.mp4"
+    - condition: "ip_brabant"
+    - decisions: *level_1
+  - decision:
+    - video: "/videos/00 Introduction 04 IP Amsterdam.mp4"
+    - condition: "ip_amsterdam"
+    - decisions: *level_1
+  - decision:
+    - video: "/videos/00 Introduction 05 IP English general.mp4"
+    - condition: "ip_english_general"
+    - decisions: *level_1
+  - decision:
+    - video: "00 Introduction 06 google.mp4"
+    - condition: "google"
+    - decisions: *level_1
