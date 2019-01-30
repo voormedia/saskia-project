@@ -83,6 +83,7 @@ class Video {
   }
 
   bufferNextVideos() {
+    // Done loading
     if (this.element.readyState == 4) {
       this.decisions.map(decision => decision.buffer())
     } else {

@@ -1,21 +1,24 @@
 require 'pry'
 require 'yaml'
-
 VIDEO_FORMATS = ["mp4", "m4v"]
 
 def generate_tree
   tree = YAML.load_file('tree_structure.yml')["level_0"]
+
+  tree = parse_array(tree)
+  binding.pry
+  File.write('./source/testTree.js', tree)
   @decisions = []
-  parse_tree(tree)
+  # parse_tree(tree)
 end
 
-def parse_tree(tree)
-  tree.map do |node|
-    tes = format_decision(node)
-    binding.pry
+def parse_array(tree)
+  tree = tree.map do |node|
+   "{ video: #{node[:video]}, decisions: #{node[:decisions] ? parse_array(node[:decisions]) : []}}"
   end
-  binding.pry
+  return tree
 end
+
 
 def format_decision(decision)
   x = {}
@@ -26,6 +29,7 @@ def format_decision(decision)
     elsif node["condition"]
       x[:condition] = node["condition"]
     elsif node["decisions"]
+      binding.pry
       x[:decisions] = node["decisions"] ? parse_tree(node["decisions"]) : []
     end
   end

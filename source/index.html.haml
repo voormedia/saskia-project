@@ -1,28 +1,29 @@
--# %nav.sections
--#   %a{:href => "#section1"} Section 1
--#   %a{:href => "#section2"} Section 2
--#   %a{:href => "#section3"} Section 3
--#   %a{:href => "#section4"} Section 4
--# #fullpage
--#   %section.section.fp-auto-height-responsive.active
--#     .page-width
--#       Some section
--#   %section.section.fp-auto-height-responsive
--#     .page-width
--#     %video{"data-autoplay" => "", controls: "", style: "min-width: 100%; min-height: 100%;"}
--#       -# %source{:type => "video/mp4", data: { src: "http://clips.vorwaerts-gmbh.de/VfE_html5.mp4"}}
--#   %section.section.fp-auto-height-responsive
--#     .page-width
--#       Some section
--#   %section.section.fp-auto-height-responsive
--#     .page-width
--#       Some section
+#mobile
+  #logo
+    = partial("layouts/logo").html_safe
+  %div.iframe-container{:style => "padding:56.25% 0 0 0;position:relative;"}
+    %iframe{:allowfullscreen => "", :frameborder => "0", :mozallowfullscreen => "", :src => "https://player.vimeo.com/video/314015422", style: "position:absolute;top:0;left:0;width:100%;height:100%;", :webkitallowfullscreen => ""}
+  %h2 Laten we met elkaar in contact komen!
+  %h3 Ik ben Saskia. Leuk dat je hier bent. Ik probeer hier iets meer over mezelf te vertellen. En ik vind het natuurlijk leuk om ook iets van jou te horen.
+  .buttons-container
+    %a 06 - 1233 1321
+    %a saskia@bonis.nu
+  #social-mobile
+    %a.linkedin{href: "https://www.linkedin.com/in/saskiabonis/"}
+      %i.fa.fa-linkedin
+    %a.email{href: "mailto:saskia@bonis.nu"}
+      %i.fa.fa-envelope
+    %a.phone{href: "tel:‭+31 6 52 64 67 68‬"}
+      %i.fa.fa-mobile
+#loader
+  .animated.infinite.pulse
+    = partial("layouts/logo").html_safe
 #page
   #contact-page-container
     #contact-page
       #info
         .text
-          %h2 Laten we met elkaar in contact komen
+          %h2 Laten we met elkaar in contact komen!
           %h3 Ik ben Saskia. Leuk dat je hier bent. Ik probeer hier iets meer over mezelf te vertellen. En ik vind het natuurlijk leuk om ook iets van jou te horen.
           %p
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ullamcorper non eros sed tristique. Duis tempor massa tortor, nec blandit mi dictum semper. Ut vehicula, lorem sodales volutpat imperdiet, tellus lorem scelerisque eros, eu scelerisque nisi eros ac leo. Quisque et risus mollis.
@@ -34,9 +35,7 @@
       #replay-all
         = image_tag "saskia5.png"
         %a BEKIJK DE VIDEO OPNIEUW
-  #loader
-    .animated.infinite.pulse
-      = partial("layouts/logo").html_safe
+
   #logo.hidden
     = partial("layouts/logo").html_safe
   #play

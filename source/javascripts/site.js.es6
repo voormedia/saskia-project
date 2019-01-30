@@ -10,13 +10,28 @@ class InteractiveVideos {
     this.backgroundMusic = $('audio')[0]
     this.playedVideosButtons = []
     this.actionsContainer = document.getElementById('actions')
-    this.setClientInformation()
-    this.getFilteredTree(tree)
-    this.playList = [this.parseTree(this.filteredTree)]
-    this.currentVideo = undefined
-    this.updateCurrentVideo()
-    this.attachEventHandlers()
+    if (jQuery.browser.mobile) {
+      $('#mobile').show()
+      $('#page').hide()
+      this.hideLoader()
+    } else {
+      $('#mobile').hide()
+      $('#page').css('display', 'flex')
+      this.setClientInformation()
+      this.getFilteredTree(tree)
+      this.playList = [this.parseTree(this.filteredTree)]
+      this.currentVideo = undefined
+      this.updateCurrentVideo()
+      this.attachEventHandlers()
+    }
   }
+
+  hideLoader() {
+    document.getElementById('logo').classList.remove('hidden')
+    document.getElementById('loader').classList.add('hidden')
+    setTimeout(() => document.getElementById('loader').style.display = "none" , 500)
+  }
+
 
   setClientInformation() {
     // test
@@ -121,7 +136,7 @@ class InteractiveVideos {
     document.getElementById('play').classList.add('hidden')
     setTimeout(() => $('#play').hide(),1000)
     this.backgroundMusic.play()
-    this.backgroundMusic.volume = 0.15
+    this.backgroundMusic.volume = 0.10
     this.currentVideo.startVideo()
   }
 

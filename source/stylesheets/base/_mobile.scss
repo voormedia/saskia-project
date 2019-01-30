@@ -1,0 +1,55 @@
+#mobile {
+  position: absolute;
+  width: 100%;
+  padding: 0 25px;
+  box-sizing: border-box;
+  .iframe-container {
+    border-radius: 6px;
+    overflow: hidden;
+    iframe {
+      width: 100%;
+    }
+  }
+
+  #logo {
+    position: relative;
+    margin: 0 auto;
+    left: 0;
+    top: 0;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    svg {
+      fill: white;
+    }
+  }
+
+  #social-mobile {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    right: 0;
+    top: 0;
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    align-items: center;
+    a {
+      margin: 0;
+      &:first-child {
+        margin-bottom: 14px;
+      }
+    }
+  }
+
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #34646D;	font-family: "Museo";	font-size: 25px;	line-height: 36px;	text-align: center;
+  }
+
+  h3 {
+    color: #34646D;	font-family: Arial;	font-size: 18px;	line-height: 23px;	text-align: center;
+  }
+}

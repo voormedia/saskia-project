@@ -8,7 +8,7 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
-    autoprefixer-rails (9.4.5)
+    autoprefixer-rails (9.4.7)
       execjs
     babel-source (5.8.35)
     babel-transpiler (0.7.0)
@@ -157,4 +157,4 @@ DEPENDENCIES
   wdm (~> 0.1)
 
 BUNDLED WITH
-   2.0.1
+   1.16.1
