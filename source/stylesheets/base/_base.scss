@@ -26,3 +26,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+video::cue {
+  font-size: 80%;
+  position: absolute;
+  bottom: 200px;
+}

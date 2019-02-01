@@ -36,12 +36,12 @@ class InteractiveVideos {
   setClientInformation() {
     // test
     // this.location.city = "Amsterdam"
-    // this.location.country = "The Netherlands"
+    // this.location.countryCode = "NL"
     if (this.location.city == "Amsterdam") {
       this.clientInformation = "ip_amsterdam"
     } else if (this.location.city == "Brabant") {
       this.clientInformation = "ip_brabant"
-    } else if (this.location.country == "The Netherlands") {
+    } else if (this.location.countryCode == "NL") {
 
       const referrer = document.referrer
 
@@ -264,6 +264,7 @@ class InteractiveVideos {
                                                                 src: tree.video,
                                                                 decisions: decisions,
                                                                 buttons: buttons,
+                                                                subtitles: tree.subtitles,
                                                                 summary: tree.summary
                                                               })
   }
@@ -274,7 +275,7 @@ class InteractiveVideos {
 // const placeholderText = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et urna id sem ornare vehicula. Donec at hendrerit magna, ut pellentesque nibh. Ut sit amet commodo dui. Donec laoreet blandit neque ac aliquam. Vestibulum ut quam pretium, porttitor sem vel, sollicitudin nulla. Donec pretium felis vitae lectus sodales, a vehicula orci vehicula. Fusce dictum, tortor sed rutrum sodales, orci diam faucibus dolor, a pellentesque odio enim quis lacus."]
 // new InteractiveVideos(tree, 'interactive-videos', { transition: "easeIn", delay: false, countdown: false }, placeholderText)
 
-jQuery.getJSON("http://api.db-ip.com/v2/free/self", function(data) {
+jQuery.getJSON("https://api.db-ip.com/v2/free/self", function(data) {
   const location = {
     country: data.countryName ? data.countryName : "",
     city: data.city ? data.city : ""

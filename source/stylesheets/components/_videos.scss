@@ -28,5 +28,7 @@ video::cue {
   @include stroke(2, black);
   padding: 10px;
   z-index: 1000000;
-  position: relative;
+  font-size: 80%;
+  position: absolute;
+  bottom: 200px;
 }

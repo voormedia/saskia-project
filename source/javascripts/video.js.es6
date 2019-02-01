@@ -8,6 +8,7 @@ class Video {
     this.finishedLoading = false
     this.decisions = args.decisions
     this.buttons = args.buttons
+    this.subtitles_src = args.subtitles
     this.summary = args.summary
     this.decisionEventListener()
   }
@@ -19,24 +20,21 @@ class Video {
     this.element.autoplay = false
     this.element.muted = false
     this.element.style.opacity = 0
-    // to remove once we have subtititles for all vids
-    if (this.src == "/images/question1.mp4") {
-      this.subtitles = document.createElement("track")
-      this.subtitles.label = "English"
-      this.subtitles.kind = "captions"
-      this.subtitles.default = "true"
-      this.subtitles.srclang = "en"
-      this.subtitles.src = '/javascripts/question1.vtt'
-      this.element.append(this.subtitles)
-      // this.element.textTracks.map(track => track,)
-      this.element.textTracks[0].mode = "showing"
-    }
+    this.subtitles = document.createElement("track")
+    this.subtitles.label = "English"
+    this.subtitles.kind = "captions"
+    this.subtitles.default = "true"
+    this.subtitles.srclang = "en"
+    this.subtitles.src = this.src.replace('.mp4', '.vtt').replace('videos', 'subtitles')
+    this.element.append(this.subtitles)
+    // this.element.textTracks.map(track => track,)
+    this.element.textTracks[0].mode = "showing"
 
     this.element.oncanplay = () => {this.hideLoader()}
   }
 
   hideLoader() {
-    document.getElementById('logo').classList.remove('hidden')
+    document.getElementById('logo-main').classList.remove('hidden')
     document.getElementById('loader').classList.add('hidden')
     setTimeout(() => document.getElementById('loader').style.display = "none" , 500)
   }
