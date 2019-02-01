@@ -273,7 +273,7 @@ class InteractiveVideos {
 
 jQuery.getJSON("https://api.db-ip.com/v2/free/self", function(data) {
   const location = {
-    country: data.countryName ? data.countryName : "",
+    countryCode: data.countryCode ? data.countryCode : "",
     city: data.city ? data.city : ""
   }
   const placeholderText = []
