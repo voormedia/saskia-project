@@ -133,6 +133,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    &:hover {
+      i {
+        transition: transform 0.1s  ease-in;
+        transform: scale(1.10);
+      }
+    }
   }
 
   .circle:before {
@@ -160,10 +167,7 @@
     transition: transform 0.1s ease-in;
 
     cursor: pointer;
-    &:hover {
-      transition: transform 0.1s  ease-in;
-      transform: scale(1.10);
-    }
+
   }
   #overlay {
     position: absolute;

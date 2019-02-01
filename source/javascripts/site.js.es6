@@ -130,6 +130,7 @@ class InteractiveVideos {
     document.getElementById('previous').addEventListener("click", (e) => { this.playPrevious() })
     document.getElementById('replay').addEventListener("click", (e) => { this.playVideo(true) })
     document.getElementById('play-button').addEventListener("click", (e) => { this.startVideo() })
+    $('.circle').on('click', () => this.startVideo())
   }
 
   startVideo() {
