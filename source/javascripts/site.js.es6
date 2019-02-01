@@ -225,10 +225,6 @@ class InteractiveVideos {
 
   updateCountdown() {
     countdown = Math.round(this.currentVideo.element.duration - this.currentVideo.element.currentTime)
-    if (this.options.countdown) {
-      const timeSpan = document.querySelector('#countdown span')
-      timeSpan.innerText = countdown
-    }
 
     if (countdown < 10 && !this.questionIsShowing){
       this.questionIsShowing = true
@@ -236,7 +232,7 @@ class InteractiveVideos {
       if (!this.onLastVideo) {
         document.getElementById('actions-container').classList.remove('slideOutDown')
         document.getElementById('actions-container').classList.add('slideInUp')
-        this.decisionTimer = this.decisionTotal = (this.currentVideo.element.duration >= 10 ? 10000 : this.currentVideo.element.duration * 1000)
+        this.decisionTimer = this.decisionTotal = (this.currentVideo.element.duration >= 10 ? 9000 : this.currentVideo.element.duration * 1000)
         let interval = 10
         this.decisionIntervalId = setInterval(() => this.decisionCountdown(interval), interval)
       }

@@ -15,8 +15,8 @@
     display: block;
     position: absolute;
     left: 50%;
-    top: 0;
-    transform: translate(-50%);
+    bottom: 0;
+    transform: translateX(-50%);
     z-index: 1;
   }
   #replay {
@@ -217,6 +217,7 @@
     }
   }
   button {
+    white-space: nowrap;
     background: transparent;
     padding: 0 5%;
     color: white;
