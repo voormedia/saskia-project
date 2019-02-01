@@ -232,7 +232,7 @@ class InteractiveVideos {
       if (!this.onLastVideo) {
         document.getElementById('actions-container').classList.remove('slideOutDown')
         document.getElementById('actions-container').classList.add('slideInUp')
-        this.decisionTimer = this.decisionTotal = (this.currentVideo.element.duration >= 10 ? 9000 : this.currentVideo.element.duration * 1000)
+        this.decisionTimer = this.decisionTotal = (this.currentVideo.element.duration >= 10 ? 9500 : this.currentVideo.element.duration * 1000)
         let interval = 10
         this.decisionIntervalId = setInterval(() => this.decisionCountdown(interval), interval)
       }
