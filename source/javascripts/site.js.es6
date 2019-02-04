@@ -39,7 +39,7 @@ class InteractiveVideos {
     // this.location.countryCode = "NL"
     if (this.location.city == "Amsterdam") {
       this.clientInformation = "ip_amsterdam"
-    } else if (this.location.city == "Brabant") {
+    } else if (this.location.stateProv == "Brabant") {
       this.clientInformation = "ip_brabant"
     } else if (this.location.countryCode == "NL") {
 
@@ -275,7 +275,8 @@ class InteractiveVideos {
 jQuery.getJSON("https://api.db-ip.com/v2/free/self", function(data) {
   const location = {
     countryCode: data.countryCode ? data.countryCode : "",
-    city: data.city ? data.city : ""
+    city: data.city ? data.city : "",
+    stateProv: data.stateProv ? data.stateProv : ""
   }
   const placeholderText = []
   new InteractiveVideos(treeSaskia, 'interactive-videos', { transition: "easeIn", delay: false, countdown: false }, placeholderText, location)
