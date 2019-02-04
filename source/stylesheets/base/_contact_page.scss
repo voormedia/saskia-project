@@ -15,6 +15,7 @@
     display: flex;
     max-width: 1080px;
     margin: 0 auto;
+
     #info {
       width: 50%;
       padding: 10% 1% 0% 2%;
@@ -48,7 +49,7 @@
 
     }
     #replay-all {
-      padding: 10% 1% 0% 1%;
+      padding: 14% 1% 0% 1%;
       width: 50%;
       justify-content: space-between;
       display: flex;
@@ -58,6 +59,18 @@
         background-color: transparent;
         border: 2px solid white;
         color: white;
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      flex-direction: column;
+      #info {
+        width: 100%;
+        padding: 13% 21%;
+        box-sizing: border-box;
+      }
+      #replay-all {
+        display: none;
       }
     }
   }
