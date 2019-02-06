@@ -62,7 +62,7 @@
       }
     }
 
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: $wide-desktop) {
       flex-direction: column;
       #info {
         width: 100%;
