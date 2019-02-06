@@ -27,8 +27,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-video::cue {
-  font-size: 80%;
+::cue {
   position: absolute;
   bottom: 200px;
 }

@@ -22,13 +22,21 @@ video {
   transition: opacity 1s ease-in-out;
 }
 
-video::cue {
+::cue {
   background: transparent;
   padding: 20px;
   @include stroke(2, black);
   padding: 10px;
   z-index: 1000000;
+
   font-size: 80%;
   position: absolute;
   bottom: 200px;
+}
+
+@-moz-document url-prefix() {
+  ::cue {
+    display: none;
+    font-size: 0px;
+  }
 }
