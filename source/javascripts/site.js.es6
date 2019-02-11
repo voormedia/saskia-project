@@ -10,6 +10,7 @@ class InteractiveVideos {
     this.backgroundMusic = $('audio')[0]
     this.playedVideosButtons = []
     this.actionsContainer = document.getElementById('actions')
+    this.userOnIpad = window.navigator.userAgent.match(/iPad/i)
     if (jQuery.browser.mobile) {
       $('#mobile').show()
       $('#page').hide()
@@ -24,6 +25,7 @@ class InteractiveVideos {
       this.updateCurrentVideo()
       this.attachEventHandlers()
     }
+
   }
 
   hideLoader() {
@@ -136,8 +138,10 @@ class InteractiveVideos {
   startVideo() {
     document.getElementById('play').classList.add('hidden')
     setTimeout(() => $('#play').hide(),1000)
-    this.backgroundMusic.play()
-    this.backgroundMusic.volume = 0.10
+    if (!this.userOnIpad) {
+      this.backgroundMusic.play()
+      this.backgroundMusic.volume = 0.10
+    }
     this.currentVideo.startVideo()
   }
 
@@ -220,7 +224,9 @@ class InteractiveVideos {
       this.decisionTimer -= interval
       document.getElementById("progress").style.width = (0 + (this.decisionTimer / this.decisionTotal * 100)) + "%"
     } else {
-      document.getElementById('decision-0').click()
+      if (!this.userOnIpad) {
+        document.getElementById('decision-0').click()
+      }
     }
   }
 
